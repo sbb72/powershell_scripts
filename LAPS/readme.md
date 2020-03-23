@@ -1,2 +1,2 @@
-## LAPS Installation and Reports
+# LAPS Installation and Reports
 
