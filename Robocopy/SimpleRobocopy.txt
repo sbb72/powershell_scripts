@@ -1,0 +1,7 @@
+robocopy Y: e:\docsdata /s /zb /COPYALL /r:1 /w:1 /log+:E:\copylog.log /nfl
+
+
+
+ROBOCOPY \\Servername\fs\Data\Home\ROB_KENN \\Servername\fs2\Home\ROB_KENN\ /s /zb /COPYALL /r:1 /w:1 /np /log+:D:\Copy\ROB_Kennlog.log
+ROBOCOPY \\Servername\fs\Data\Home\andr_cor \\Servername\fs2\Home\andr_cor\ /s /zb /COPYALL /r:1 /w:1 /np /log+:D:\Copy\andr_corlog.log
+ROBOCOPY \\Servername\fs\Data\Home\CHR_WRAT \\Servername\fs2\Home\CHR_WRAT\ /s /zb /COPYALL /r:1 /w:1 /np /log+:D:\Copy\CHR_WRATlog.log

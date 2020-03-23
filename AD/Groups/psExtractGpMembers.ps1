@@ -1,0 +1,1 @@
+Get-ADGroup groupname -properties Member | Select-Object -Expand Member | Get-ADComputer -properties Name | Select Name | Export-CSV .\file.csv

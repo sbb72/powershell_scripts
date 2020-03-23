@@ -1,0 +1,10 @@
+vmhost = Get-VMHost -Name nuc.primp-industries.com
+ 
+$esxi_version = $vmhost.ExtensionData.Config.Product.Version
+$esxi_build = $vmhost.ExtensionData.Config.Product.Build
+$esxi_update_level = (Get-AdvancedSetting -Entity $vmhost -Name Misc.HostAgentUpdateLevel).value
+ 
+Write-Host "$vmhost" 
+Write-Host "`tVersion: $esxi_version"
+Write-Host "`tUpdate: $esxi_update_level"
+Write-Host "`tBuild: $esxi_build"

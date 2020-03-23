@@ -1,0 +1,2 @@
+takeown /F D:\TSProf\Folder /R /A /D Y
+icacls D:\TSProf\Folder /grant greenlnk\username:(OI)(CI)F

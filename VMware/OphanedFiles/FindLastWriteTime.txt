@@ -1,0 +1,59 @@
+disconnect-viserver
+
+Connect-VIServer 
+
+$file = 'C:\Users\priestleyg\Documents\RVTools_tabvHealth.csv'
+
+$driveName = 'DS'
+
+$report = @()
+
+# Cleanup leftovers
+
+Get-PSDrive -Name $driveName -ErrorAction SilentlyContinue | Remove-PSDrive -Confirm:$False -ErrorAction SilentlyContinue
+
+Get-Content -Path $file | ConvertFrom-Csv | where{$_.Message -match 'Possibly a Zombie vmdk file'} |
+
+Group-Object -Property {$_.Name.Split(']')[0].Trimstart('[')} | %{
+
+    $ds = Get-Datastore -Name $_.Name
+
+    Try{
+
+        New-PSDrive -Name $driveName -PSProvider VimDatastore -Root \ -Location $ds > $null
+
+    }
+
+    Catch{
+
+        Write-Host "Could not create PSDrive for $($ds.Name)"
+
+        break
+
+    }
+
+    $_.Group | %{
+
+        $vmdkPath = "$($driveName):\$($_.Name.Split(' ')[1])"
+
+        if(Test-Path -Path $vmdkPath){
+
+            $report += (Get-ChildItem -Path $vmdkPath | Select DatastoreFullPath,LastWriteTime)
+
+        }
+
+        else{
+
+            Write-Host "VMDK $($vmdkPath) not found"
+
+        }
+
+    }
+
+    Remove-PSDrive -Name DS -ErrorAction SilentlyContinue
+
+}
+
+$report | Export-Csv C:\Users\priestleyg\Documents\report.csv -NoTypeInformation -UseCulture
+
+#$report

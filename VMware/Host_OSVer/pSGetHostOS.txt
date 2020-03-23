@@ -1,0 +1,3 @@
+add-pssnapin VMware.VimAutomation.Core
+connect-viserver Servername
+Get-VMhost * | Select Name, Version, Build | Export-csv C:\Temp\os-ver.csv

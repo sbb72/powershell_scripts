@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="serverhtml.xsl"?>
+<computer>
+ <generated script="sydi-server" version="2.4" scantime="24/02/2015 11:20:14" />
+ <system name="CSCGBRAE652639" />
+ <operatingsystem name="Microsoft Windows 7 Enterprise " servicepack="Service Pack 1" />
+ <fqdn name="cscgbrae652639.EMEA.globalcsc.net" />
+ <roles>
+  <role name="File" />
+ </roles>
+ <machineinfo manufacturer="LENOVO" productname="6475CA6" identifyingnumber="R8MWKAN" chassis="Notebook" />
+ <processor count="1" name="Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz" description="Intel64 Family 6 Model 23 Stepping 10" speed="2401" l2cachesize="3072" externalclock="266" htsystem="False" />
+ <memory totalsize="3992">
+  <memorybank bank="Bank 0/1" capacity="2048" formfactor="SODIMM" memorytype="Unknown" />
+  <memorybank bank="Bank 2/3" capacity="2048" formfactor="SODIMM" memorytype="Unknown" />
+ </memory>
+ <win32_cdromdrive>
+ </win32_cdromdrive>
+ <videocontroller>
+  <adapter name="Mobile Intel(R) 4 Series Express Chipset Family" adapterram="1771.9921875" compatibility="Intel Corporation" />
+  <adapter name="Mobile Intel(R) 4 Series Express Chipset Family" adapterram="0" compatibility="Intel Corporation" />
+ </videocontroller>
+ <win32_sounddevice>
+  <card name="Conexant 20561 SmartAudio HD" manufacturer="Conexant" />
+ </win32_sounddevice>
+ <bios version="LENOVO - 3090" smbiosversion="7UET79WW (3.09 )" smbiosmajorversion="2" smbbiosminorversion="4">
+  <bioscharacteristics id="7" name="PCI is supported" />
+  <bioscharacteristics id="8" name="PC Card (PCMCIA) is supported" />
+  <bioscharacteristics id="9" name="Plug and Play is supported" />
+  <bioscharacteristics id="11" name="BIOS is Upgradable (Flash)" />
+  <bioscharacteristics id="12" name="BIOS shadowing is allowed" />
+  <bioscharacteristics id="14" name="ESCD support is available" />
+  <bioscharacteristics id="15" name="Boot from CD is supported" />
+  <bioscharacteristics id="16" name="Selectable Boot is supported" />
+  <bioscharacteristics id="17" name="BIOS ROM is socketed" />
+  <bioscharacteristics id="19" name="EDD (Enhanced Disk Drive) Specification is supported" />
+  <bioscharacteristics id="32" name="ACPI supported" />
+  <bioscharacteristics id="33" name="USB Legacy is supported" />
+  <bioscharacteristics id="40" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="42" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="48" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="49" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="56" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="59" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="64" name="Unknown (Undocumented)" />
+  <bioscharacteristics id="72" name="Unknown (Undocumented)" />
+ </bios>
+ <osconfiguration osname="Microsoft Windows 7 Enterprise " computerrole="Member Workstation" domainname="EMEA.globalcsc.net" domaintype="domain" windowslocation="C:\Windows" oslanguage="English" installdate="18/10/2012 12:46:40" />
+ <lastuser name="" />
+ <windowscomponents>
+  <component name="Windows Media Player (from Start Menu and Desktop)" class="2200" classname="" level="1" />
+ </windowscomponents>
+ <patches>
+  <patch description="Update" hotfixid="KB2764913" installdate="1/12/2014" />
+  <patch description="Update" hotfixid="KB2764916" installdate="1/12/2014" />
+  <patch description="Update" hotfixid="KB2718695" installdate="1/12/2014" />
+  <patch description="Update" hotfixid="KB2670838" installdate="1/12/2014" />
+  <patch description="Update" hotfixid="KB971033" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2393802" installdate="7/26/2012" />
+  <patch description="Hotfix" hotfixid="KB2394911" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2425227" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2475792" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2476490" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2479628" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2479943" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2484033" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2485376" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2488113" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2491683" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2492386" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2503665" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2505438" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2506014" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2506212" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2506928" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2507618" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2508272" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2509553" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2510531" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2511250" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2511455" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2515325" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2518869" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2522422" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2532531" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2533552" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2536275" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2536276" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2539635" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2541014" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2544893" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2545698" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2547666" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2552343" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2555917" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2556532" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2560656" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2562937" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2563227" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2563894" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2564958" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2567053" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2567680" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2570791" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2570947" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2579686" installdate="7/26/2012" />
+  <patch description="Hotfix" hotfixid="KB2581608" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2584146" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2585542" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2604115" installdate="7/26/2012" />
+  <patch description="Hotfix" hotfixid="KB2616332" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2616676" installdate="7/26/2012" />
+  <patch description="Hotfix" hotfixid="KB2617858" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2618451" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2619339" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2620704" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2620712" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2621440" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2631813" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2633952" installdate="7/26/2012" />
+  <patch description="Hotfix" hotfixid="KB2638018" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2640148" installdate="7/26/2012" />
+  <patch description="Hotfix" hotfixid="KB2641739" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2644615" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2645640" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2653956" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2654428" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2655992" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2656356" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2656373" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2656411" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2658846" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2659262" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2660649" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2661254" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2667402" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2676562" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2685811" installdate="11/8/2012" />
+  <patch description="Security Update" hotfixid="KB2685939" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2686831" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2688338" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2690533" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2691442" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2695962" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2698365" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2699988" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2705219" installdate="10/18/2012" />
+  <patch description="Security Update" hotfixid="KB2706045" installdate="8/30/2012" />
+  <patch description="Security Update" hotfixid="KB2709715" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2712808" installdate="8/30/2012" />
+  <patch description="Security Update" hotfixid="KB2718523" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB2718704" installdate="10/18/2012" />
+  <patch description="Security Update" hotfixid="KB2719985" installdate="7/26/2012" />
+  <patch description="Security Update" hotfixid="KB2722913" installdate="8/30/2012" />
+  <patch description="Security Update" hotfixid="KB2724197" installdate="10/18/2012" />
+  <patch description="Security Update" hotfixid="KB2727528" installdate="11/21/2012" />
+  <patch description="Update" hotfixid="KB2729094" installdate="1/12/2014" />
+  <patch description="Security Update" hotfixid="KB2729452" installdate="11/26/2012" />
+  <patch description="Security Update" hotfixid="KB2731847" installdate="10/18/2012" />
+  <patch description="Update" hotfixid="KB2736233" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2736422" installdate="1/17/2013" />
+  <patch description="Security Update" hotfixid="KB2742599" installdate="1/21/2013" />
+  <patch description="Security Update" hotfixid="KB2743555" installdate="10/18/2012" />
+  <patch description="Security Update" hotfixid="KB2744842" installdate="10/18/2012" />
+  <patch description="Update" hotfixid="KB2749655" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2753842" installdate="1/16/2013" />
+  <patch description="Update" hotfixid="KB2756822" installdate="10/18/2012" />
+  <patch description="Security Update" hotfixid="KB2756921" installdate="1/16/2013" />
+  <patch description="Security Update" hotfixid="KB2757638" installdate="1/22/2013" />
+  <patch description="Security Update" hotfixid="KB2758857" installdate="12/24/2012" />
+  <patch description="Security Update" hotfixid="KB2761226" installdate="11/26/2012" />
+  <patch description="Security Update" hotfixid="KB2761465" installdate="12/20/2012" />
+  <patch description="Security Update" hotfixid="KB2769369" installdate="1/16/2013" />
+  <patch description="Security Update" hotfixid="KB2770660" installdate="12/20/2012" />
+  <patch description="Security Update" hotfixid="KB2778344" installdate="2/24/2013" />
+  <patch description="Security Update" hotfixid="KB2778930" installdate="1/18/2013" />
+  <patch description="Security Update" hotfixid="KB2779030" installdate="12/19/2012" />
+  <patch description="Update" hotfixid="KB2779562" installdate="12/21/2012" />
+  <patch description="Security Update" hotfixid="KB2785220" installdate="1/16/2013" />
+  <patch description="Update" hotfixid="KB2786081" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2789645" installdate="2/24/2013" />
+  <patch description="Security Update" hotfixid="KB2790113" installdate="2/24/2013" />
+  <patch description="Security Update" hotfixid="KB2790655" installdate="2/24/2013" />
+  <patch description="Security Update" hotfixid="KB2792100" installdate="2/24/2013" />
+  <patch description="Security Update" hotfixid="KB2799494" installdate="2/24/2013" />
+  <patch description="Security Update" hotfixid="KB2803821" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2804579" installdate="5/23/2013" />
+  <patch description="Security Update" hotfixid="KB2807986" installdate="3/21/2013" />
+  <patch description="Security Update" hotfixid="KB2808735" installdate="4/26/2013" />
+  <patch description="Security Update" hotfixid="KB2809289" installdate="3/13/2013" />
+  <patch description="Security Update" hotfixid="KB2813170" installdate="4/26/2013" />
+  <patch description="Security Update" hotfixid="KB2813347" installdate="4/26/2013" />
+  <patch description="Security Update" hotfixid="KB2817183" installdate="4/26/2013" />
+  <patch description="Security Update" hotfixid="KB2829361" installdate="5/28/2013" />
+  <patch description="Security Update" hotfixid="KB2829530" installdate="5/28/2013" />
+  <patch description="Security Update" hotfixid="KB2830290" installdate="5/23/2013" />
+  <patch description="Security Update" hotfixid="KB2832414" installdate="7/29/2013" />
+  <patch description="Security Update" hotfixid="KB2833946" installdate="7/23/2013" />
+  <patch description="Update" hotfixid="KB2834140" installdate="1/12/2014" />
+  <patch description="Security Update" hotfixid="KB2834886" installdate="7/23/2013" />
+  <patch description="Security Update" hotfixid="KB2835361" installdate="7/18/2013" />
+  <patch description="Security Update" hotfixid="KB2835364" installdate="7/23/2013" />
+  <patch description="Security Update" hotfixid="KB2838727" installdate="6/20/2013" />
+  <patch description="Security Update" hotfixid="KB2839894" installdate="6/20/2013" />
+  <patch description="Security Update" hotfixid="KB2840631" installdate="7/18/2013" />
+  <patch description="Security Update" hotfixid="KB2844286" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2845187" installdate="7/23/2013" />
+  <patch description="Security Update" hotfixid="KB2845690" installdate="6/20/2013" />
+  <patch description="Security Update" hotfixid="KB2846071" installdate="7/23/2013" />
+  <patch description="Security Update" hotfixid="KB2847311" installdate="10/23/2013" />
+  <patch description="Security Update" hotfixid="KB2847927" installdate="7/23/2013" />
+  <patch description="Security Update" hotfixid="KB2849470" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2850851" installdate="7/23/2013" />
+  <patch description="Security Update" hotfixid="KB2855844" installdate="10/22/2013" />
+  <patch description="Security Update" hotfixid="KB2859537" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2861191" installdate="10/15/2013" />
+  <patch description="Security Update" hotfixid="KB2861698" installdate="10/15/2013" />
+  <patch description="Security Update" hotfixid="KB2861855" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2862335" installdate="10/15/2013" />
+  <patch description="Security Update" hotfixid="KB2862772" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2862966" installdate="8/28/2013" />
+  <patch description="Update" hotfixid="KB2863058" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2863240" installdate="10/16/2013" />
+  <patch description="Security Update" hotfixid="KB2864058" installdate="10/28/2013" />
+  <patch description="Security Update" hotfixid="KB2864202" installdate="10/23/2013" />
+  <patch description="Security Update" hotfixid="KB2868038" installdate="10/23/2013" />
+  <patch description="Security Update" hotfixid="KB2868623" installdate="8/28/2013" />
+  <patch description="Security Update" hotfixid="KB2868626" installdate="11/25/2013" />
+  <patch description="Security Update" hotfixid="KB2870699" installdate="9/25/2013" />
+  <patch description="Security Update" hotfixid="KB2872339" installdate="9/29/2013" />
+  <patch description="Security Update" hotfixid="KB2875783" installdate="11/25/2013" />
+  <patch description="Security Update" hotfixid="KB2876284" installdate="10/22/2013" />
+  <patch description="Security Update" hotfixid="KB2876315" installdate="9/29/2013" />
+  <patch description="Security Update" hotfixid="KB2876331" installdate="11/25/2013" />
+  <patch description="Security Update" hotfixid="KB2879017" installdate="10/17/2013" />
+  <patch description="Security Update" hotfixid="KB2883150" installdate="10/23/2013" />
+  <patch description="Security Update" hotfixid="KB2884256" installdate="10/23/2013" />
+  <patch description="Security Update" hotfixid="KB2887069" installdate="12/19/2013" />
+  <patch description="Security Update" hotfixid="KB2888505" installdate="11/20/2013" />
+  <patch description="Security Update" hotfixid="KB2892074" installdate="12/19/2013" />
+  <patch description="Security Update" hotfixid="KB2893294" installdate="12/17/2013" />
+  <patch description="Security Update" hotfixid="KB2893984" installdate="12/19/2013" />
+  <patch description="Security Update" hotfixid="KB2898785" installdate="12/17/2013" />
+  <patch description="Security Update" hotfixid="KB2898857" installdate="2/24/2014" />
+  <patch description="Security Update" hotfixid="KB2900986" installdate="11/25/2013" />
+  <patch description="Security Update" hotfixid="KB2901112" installdate="2/19/2014" />
+  <patch description="Security Update" hotfixid="KB2909210" installdate="2/24/2014" />
+  <patch description="Security Update" hotfixid="KB2909921" installdate="2/20/2014" />
+  <patch description="Security Update" hotfixid="KB2911501" installdate="2/21/2014" />
+  <patch description="Security Update" hotfixid="KB2912390" installdate="2/19/2014" />
+  <patch description="Security Update" hotfixid="KB2913602" installdate="1/22/2014" />
+  <patch description="Security Update" hotfixid="KB2916036" installdate="2/19/2014" />
+  <patch description="Security Update" hotfixid="KB2918614" installdate="8/26/2014" />
+  <patch description="Security Update" hotfixid="KB2922229" installdate="4/22/2014" />
+  <patch description="Security Update" hotfixid="KB2925418" installdate="3/20/2014" />
+  <patch description="Security Update" hotfixid="KB2926765" installdate="5/28/2014" />
+  <patch description="Security Update" hotfixid="KB2929961" installdate="3/19/2014" />
+  <patch description="Security Update" hotfixid="KB2930275" installdate="3/20/2014" />
+  <patch description="Security Update" hotfixid="KB2931356" installdate="5/27/2014" />
+  <patch description="Security Update" hotfixid="KB2937610" installdate="8/26/2014" />
+  <patch description="Security Update" hotfixid="KB2939576" installdate="6/19/2014" />
+  <patch description="Security Update" hotfixid="KB2943357" installdate="8/25/2014" />
+  <patch description="Security Update" hotfixid="KB2953522" installdate="5/28/2014" />
+  <patch description="Security Update" hotfixid="KB2957189" installdate="6/19/2014" />
+  <patch description="Security Update" hotfixid="KB2957503" installdate="6/19/2014" />
+  <patch description="Security Update" hotfixid="KB2957509" installdate="6/19/2014" />
+  <patch description="Security Update" hotfixid="KB2957689" installdate="6/19/2014" />
+  <patch description="Security Update" hotfixid="KB2961072" installdate="7/17/2014" />
+  <patch description="Security Update" hotfixid="KB2962872" installdate="7/17/2014" />
+  <patch description="Security Update" hotfixid="KB2964358" installdate="5/6/2014" />
+  <patch description="Security Update" hotfixid="KB2965788" installdate="6/19/2014" />
+  <patch description="Security Update" hotfixid="KB2968294" installdate="10/21/2014" />
+  <patch description="Security Update" hotfixid="KB2971850" installdate="7/15/2014" />
+  <patch description="Security Update" hotfixid="KB2972100" installdate="10/22/2014" />
+  <patch description="Security Update" hotfixid="KB2972211" installdate="9/19/2014" />
+  <patch description="Security Update" hotfixid="KB2972280" installdate="7/17/2014" />
+  <patch description="Security Update" hotfixid="KB2973112" installdate="9/18/2014" />
+  <patch description="Security Update" hotfixid="KB2973201" installdate="7/17/2014" />
+  <patch description="Security Update" hotfixid="KB2976627" installdate="8/26/2014" />
+  <patch description="Security Update" hotfixid="KB2977629" installdate="9/17/2014" />
+  <patch description="Security Update" hotfixid="KB2978120" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB2978668" installdate="8/26/2014" />
+  <patch description="Security Update" hotfixid="KB2978742" installdate="8/26/2014" />
+  <patch description="Security Update" hotfixid="KB2979570" installdate="10/24/2014" />
+  <patch description="Security Update" hotfixid="KB2987107" installdate="10/24/2014" />
+  <patch description="Security Update" hotfixid="KB2991963" installdate="11/21/2014" />
+  <patch description="Security Update" hotfixid="KB2992611" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB2993958" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB3000869" installdate="10/22/2014" />
+  <patch description="Security Update" hotfixid="KB3002885" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB3003057" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB3003743" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB3005607" installdate="11/21/2014" />
+  <patch description="Security Update" hotfixid="KB3006226" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB3008923" installdate="12/22/2014" />
+  <patch description="Security Update" hotfixid="KB3010788" installdate="11/19/2014" />
+  <patch description="Security Update" hotfixid="KB3011780" installdate="11/27/2014" />
+  <patch description="Security Update" hotfixid="KB3013126" installdate="12/29/2014" />
+  <patch description="Security Update" hotfixid="KB3019215" installdate="1/21/2015" />
+  <patch description="Security Update" hotfixid="KB3019978" installdate="1/21/2015" />
+  <patch description="Security Update" hotfixid="KB3021674" installdate="1/21/2015" />
+  <patch description="Security Update" hotfixid="KB3021952" installdate="2/23/2015" />
+  <patch description="Security Update" hotfixid="KB3022777" installdate="1/21/2015" />
+  <patch description="Security Update" hotfixid="KB3023266" installdate="1/21/2015" />
+  <patch description="Update" hotfixid="KB958488" installdate="7/26/2012" />
+  <patch description="Update" hotfixid="KB976002" installdate="3/13/2013" />
+  <patch description="Update" hotfixid="KB976902" installdate="11/21/2010" />
+  <patch description="Update" hotfixid="KB982018" installdate="7/26/2012" />
+ </patches>
+ <installedapplications>
+  <msiapplication productname="7-Zip 9.20 (x64 edition)" vendor="Igor Pavlov" version="9.20.00.0" installdate="20121102" />
+  <msiapplication productname="Adobe Flash Player 16 ActiveX" vendor="Adobe Systems Incorporated" version="16.0.0.305" installdate="20150223" />
+  <msiapplication productname="Adobe Flash Player 16 NPAPI" vendor="Adobe Systems Incorporated" version="16.0.0.305" installdate="20150216" />
+  <msiapplication productname="Adobe Reader XI (11.0.10)" vendor="Adobe Systems Incorporated" version="11.0.10" installdate="20150116" />
+  <msiapplication productname="AT&#38;T Connect Participant Application v9.0.82" vendor="AT&#38;T Inc." version="9.0.82" installdate="20141001" />
+  <msiapplication productname="BIG-IP Component Installer" vendor="F5 Networks" version="70.2011.0623.0528" installdate="20121018" />
+  <msiapplication productname="Check Point Endpoint Security - Full Disk Encryption" vendor="Check Point Software Technologies Ltd" version="7.4.5.1667" installdate="20121018" />
+  <msiapplication productname="Check Point Endpoint Security - Media Encryption Client" vendor="Check Point Software Technologies Ltd." version="4.97.0000" installdate="20121018" />
+  <msiapplication productname="Check Point File Encryption" vendor="Check Point Technologies LTD" version="88.9.25.2" installdate="20121018" />
+  <msiapplication productname="Cisco Systems VPN Client 5.0.07.0440" vendor="Cisco Systems, Inc." version="5.0.7" installdate="20121018" />
+  <msiapplication productname="Citrix Authentication Manager" vendor="Citrix Systems, Inc." version="2.0.0.41479" installdate="20121023" />
+  <msiapplication productname="Citrix Receiver (HDX Flash Redirection)" vendor="Citrix Systems, Inc." version="13.1.201.3" installdate="20121023" />
+  <msiapplication productname="Citrix Receiver Inside" vendor="Citrix Systems, Inc." version="3.2.0.5844" installdate="20121023" />
+  <msiapplication productname="Citrix Receiver(Aero)" vendor="Citrix Systems, Inc." version="13.1.201.3" installdate="20121023" />
+  <msiapplication productname="Citrix Receiver(DV)" vendor="Citrix Systems, Inc." version="13.1.201.3" installdate="20121023" />
+  <msiapplication productname="Citrix Receiver(USB)" vendor="Citrix Systems, Inc." version="13.1.201.3" installdate="20121023" />
+  <msiapplication productname="Compatibility Pack for the 2007 Office system" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20150220" />
+  <msiapplication productname="CSC VPN CLIENT" vendor="Nortel Networks" version="10.04.016" installdate="20121018" />
+  <msiapplication productname="CSC-ENG-EnableUAC-1.0-GBL-R1" vendor="CSC" version="1.0" installdate="20130402" />
+  <msiapplication productname="cscmarimba" vendor="BMC Software, Inc" version="8.2.02" installdate="20140707" />
+  <msiapplication productname="EMET 5.1" vendor="Microsoft Corporation" version="5.1" installdate="20150216" />
+  <msiapplication productname="Google Update Helper" vendor="Google Inc." version="1.3.25.11" installdate="20141114" />
+  <msiapplication productname="Google Update Helper" vendor="Google Inc." version="1.3.26.9" installdate="20150214" />
+  <msiapplication productname="Java 7 Update 75" vendor="Oracle" version="7.0.750" installdate="20150219" />
+  <msiapplication productname="Java 7 Update 75 (64-bit)" vendor="Oracle" version="7.0.750" installdate="20150219" />
+  <msiapplication productname="Jive for Office" vendor="Jive Software" version="30.2.669.16194" installdate="20150122" />
+  <msiapplication productname="Lenovo Fingerprint Software" vendor="AuthenTec, Inc." version="3.3.0.56" installdate="20121018" />
+  <msiapplication productname="Lotus Notes 8.5.2" vendor="IBM" version="8.52.10222" installdate="20120726" />
+  <msiapplication productname="McAfee Agent" vendor="McAfee, Inc." version="4.8.1002" installdate="20140908" />
+  <msiapplication productname="McAfee Host Intrusion Prevention" vendor="McAfee, Inc." version="8.00.0202" installdate="20131025" />
+  <msiapplication productname="McAfee VirusScan Enterprise" vendor="McAfee, Inc." version="8.8.02004" installdate="20130224" />
+  <msiapplication productname="Microsoft .NET Framework 4 Client Profile" vendor="Microsoft Corporation" version="4.0.30319" installdate="20141121" />
+  <msiapplication productname="Microsoft .NET Framework 4 Extended" vendor="Microsoft Corporation" version="4.0.30319" installdate="20140220" />
+  <msiapplication productname="Microsoft Chart Controls for Microsoft .NET Framework 3.5" vendor="Microsoft Corporation" version="3.5.0.0" installdate="20130108" />
+  <msiapplication productname="Microsoft Office Access MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Access Setup Metadata MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Excel MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office InfoPath MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Office 64-bit Components 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20130116" />
+  <msiapplication productname="Microsoft Office Outlook MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office PowerPoint MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Professional Plus 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20150220" />
+  <msiapplication productname="Microsoft Office Proof (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Proof (French) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Proof (Spanish) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Proofing (English) 2007" vendor="Microsoft Corporation" version="12.0.4518.1014" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Publisher MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Shared 64-bit MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Shared 64-bit Setup Metadata MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Shared MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20131121" />
+  <msiapplication productname="Microsoft Office Shared Setup Metadata MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft Office Visio Viewer 2007" vendor="Microsoft Corporation" version="12.0.6425.1000" installdate="20130116" />
+  <msiapplication productname="Microsoft Office Word MUI (English) 2007" vendor="Microsoft Corporation" version="12.0.6612.1000" installdate="20120726" />
+  <msiapplication productname="Microsoft RichCopy 4.0" vendor="Microsoft Corporation" version="4.0.216" installdate="20121213" />
+  <msiapplication productname="Microsoft Save as PDF or XPS Add-in for 2007 Microsoft Office programs" vendor="Microsoft Corporation" version="12.0.4518.1014" installdate="20120726" />
+  <msiapplication productname="Microsoft Visual C++ 2005 Redistributable" vendor="Microsoft Corporation" version="8.0.61001" installdate="20121019" />
+  <msiapplication productname="Microsoft Visual C++ 2005 Redistributable (x64)" vendor="Microsoft Corporation" version="8.0.61000" installdate="20121019" />
+  <msiapplication productname="Microsoft Visual C++ 2005 Redistributable (x64)" vendor="Microsoft Corporation" version="8.0.50727.42" installdate="20121018" />
+  <msiapplication productname="Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.4148" vendor="Microsoft Corporation" version="9.0.30729.4148" installdate="20121018" />
+  <msiapplication productname="Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161" vendor="Microsoft Corporation" version="9.0.30729.6161" installdate="20121019" />
+  <msiapplication productname="Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4148" vendor="Microsoft Corporation" version="9.0.30729.4148" installdate="20121018" />
+  <msiapplication productname="Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161" vendor="Microsoft Corporation" version="9.0.30729.6161" installdate="20121019" />
+  <msiapplication productname="Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219" vendor="Microsoft Corporation" version="10.0.40219" installdate="20131028" />
+  <msiapplication productname="Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219" vendor="Microsoft Corporation" version="10.0.40219" installdate="20130217" />
+  <msiapplication productname="Online Plug-in" vendor="Citrix Systems, Inc." version="13.1.201.3" installdate="20121023" />
+  <msiapplication productname="PAL" vendor="PAL" version="2.7.1" installdate="20150219" />
+  <msiapplication productname="PAL" vendor="PAL" version="2.3.3" installdate="20130108" />
+  <msiapplication productname="Quest ActiveRoles Management Shell for Active Directory (x64)" vendor="Quest Software, Inc." version="1.5.1.2421" installdate="20130628" />
+  <msiapplication productname="Quest PowerGUI® 3.8" vendor="Quest Software, Inc." version="3.8.0.129" installdate="20140311" />
+  <msiapplication productname="SAFE Servlet" vendor="Guidance Software" version="6.19.1" installdate="20121022" />
+  <msiapplication productname="Self-service Plug-in" vendor="Citrix Systems, Inc." version="3.2.0.24226" installdate="20121023" />
+  <msiapplication productname="SupportSoft_Amer_CSCi_7_User_Agent_v22" vendor="SupportSoft" version="22" installdate="20121018" />
+  <msiapplication productname="ThinkPad Bluetooth with Enhanced Data Rate Software" vendor=" " version="6.2.1.3100" installdate="20121018" />
+  <msiapplication productname="ThinkVantage Access Connections" vendor="Lenovo" version="5.50" installdate="20121018" />
+  <msiapplication productname="ThinkVantage Active Protection System" vendor="Lenovo" version="1.71" installdate="20121018" />
+  <msiapplication productname="tools-windows" vendor="VMware, Inc." version="9.2.2.894247" installdate="20130115" />
+  <msiapplication productname="VC 9.0 Runtime" vendor="Check Point Software Technologies Ltd" version="1.0.0" installdate="20121018" />
+  <msiapplication productname="VMware Player" vendor="VMware, Inc." version="5.0.1" installdate="20121112" />
+  <msiapplication productname="VMware vCenter Converter Standalone" vendor="VMware, Inc." version="5.0.0.470252" installdate="20121018" />
+  <regapplication productname="ClearPass OnGuard 6.3.1.62009" version="6.3.1.62009" />
+  <regapplication productname="Conexant 20561 SmartAudio HD" version="4.92.10.0" />
+  <regapplication productname="Intel(R) Management Engine Interface" version="" />
+  <regapplication productname="Intel® Active Management Technology" version="" />
+  <regapplication productname="Lenovo Auto Scroll Utility" version="1.11" />
+  <regapplication productname="Lenovo System Interface Driver" version="1.05" />
+  <regapplication productname="McAfee Host Intrusion Prevention" version="8.00.0202" />
+  <regapplication productname="Microsoft .NET Framework 4 Client Profile" version="4.0.30319" />
+  <regapplication productname="Microsoft .NET Framework 4 Extended" version="4.0.30319" />
+  <regapplication productname="On Screen Display" version="6.60.03" />
+  <regapplication productname="PDF-XChange 3" version="" />
+  <regapplication productname="ThinkPad FullScreen Magnifier" version="2.40" />
+  <regapplication productname="ThinkPad Modem Adapter" version="7.80.5.0" />
+  <regapplication productname="ThinkPad Power Management Driver" version="1.64.00.00" />
+  <regapplication productname="ThinkPad UltraNav Driver" version="13.2.4.12" />
+  <regapplication productname="Windows Driver Package - AuthenTec Inc. (ATSwpWDF) Biometric  (07/07/2009 8.1.2.56)" version="07/07/2009 8.1.2.56" />
+  <productkey productname="Windows 7 Enterprise" productkey="N/A" />
+ </installedapplications>
+ <storage>
+  <drives name="FUJITSU MHZ2160BJ G1" deviceid="\\.\PHYSICALDRIVE0" interface="IDE" totaldisksize="149.05">
+   <partition name="C:" size="65.16" freespace="15.51" filesystem="NTFS" />
+   <partition name="D:" size="83.88" freespace="12.57" filesystem="NTFS" />
+  </drives>
+ </storage>
+ <network>
+  <adapter description="Intel(R) 82567LM Gigabit Network Connection" macaddress="00:27:13:65:73:56">
+   <ip address="20.44.176.102" subnetmask="255.255.252.0" />
+   <ip address="fe80::ac99:a983:186f:ff64" subnetmask="64" />
+   <gateway address="20.44.179.254" />
+   <dnsserver address="20.138.3.53" />
+   <dnsserver address="20.138.19.53" />
+   <dnsdomain name="uk.emea.csc.com" />
+   <primarywins address="20.44.34.196" />
+   <secondarywins address="20.42.13.39" />
+   <dhcpserver address="20.44.34.73" />
+  </adapter>
+  <adapter description="VMware Virtual Ethernet Adapter for VMnet1" macaddress="00:50:56:C0:00:01">
+   <ip address="192.168.85.1" subnetmask="255.255.255.0" />
+   <ip address="fe80::398c:70dd:e5ff:68c0" subnetmask="64" />
+   <gateway address="" />
+   <dnsserver address="20.44.34.31" />
+   <dnsdomain name="" />
+  </adapter>
+  <adapter description="VMware Virtual Ethernet Adapter for VMnet8" macaddress="00:50:56:C0:00:08">
+   <ip address="192.168.126.1" subnetmask="255.255.255.0" />
+   <ip address="fe80::a9be:ec98:a0a9:6fb5" subnetmask="64" />
+   <gateway address="" />
+   <dnsserver address="20.44.34.31" />
+   <dnsdomain name="" />
+  </adapter>
+  <ip4routes>
+   <route destination="0.0.0.0" mask="0.0.0.0" nexthop="20.44.179.254" />
+   <route destination="20.44.176.0" mask="255.255.252.0" nexthop="0.0.0.0" />
+   <route destination="20.44.176.102" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="20.44.179.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="127.0.0.0" mask="255.0.0.0" nexthop="0.0.0.0" />
+   <route destination="127.0.0.1" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="127.255.255.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="192.168.85.0" mask="255.255.255.0" nexthop="0.0.0.0" />
+   <route destination="192.168.85.1" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="192.168.85.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="192.168.126.0" mask="255.255.255.0" nexthop="0.0.0.0" />
+   <route destination="192.168.126.1" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="192.168.126.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="224.0.0.0" mask="240.0.0.0" nexthop="0.0.0.0" />
+   <route destination="224.0.0.0" mask="240.0.0.0" nexthop="0.0.0.0" />
+   <route destination="224.0.0.0" mask="240.0.0.0" nexthop="0.0.0.0" />
+   <route destination="224.0.0.0" mask="240.0.0.0" nexthop="0.0.0.0" />
+   <route destination="255.255.255.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="255.255.255.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="255.255.255.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+   <route destination="255.255.255.255" mask="255.255.255.255" nexthop="0.0.0.0" />
+  </ip4routes>
+ </network>
+ <eventlogfiles>
+  <eventlogfile name="Application" file="C:\Windows\System32\Winevt\Logs\Application.evtx" maximumsize="40" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Aruba Networks" file="C:\Windows\System32\Winevt\Logs\Aruba Networks.evtx" maximumsize="10" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="HardwareEvents" file="C:\Windows\System32\Winevt\Logs\HardwareEvents.evtx" maximumsize="20" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Internet Explorer" file="C:\Windows\System32\Winevt\Logs\Internet Explorer.evtx" maximumsize="1.00390625" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Key Management Service" file="C:\Windows\System32\Winevt\Logs\Key Management Service.evtx" maximumsize="20" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Lenovo-Lenovo Patch Utility/Admin" file="C:\Windows\System32\Winevt\Logs\Lenovo-Lenovo Patch Utility%4Admin.evtx" maximumsize="1.00390625" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="LogEvent" file="C:\Windows\System32\Winevt\Logs\LogEvent.evtx" maximumsize="1.00390625" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Media Center" file="C:\Windows\System32\Winevt\Logs\Media Center.evtx" maximumsize="8" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="ODiag" file="C:\Windows\System32\Winevt\Logs\ODiag.evtx" maximumsize="16" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="OSession" file="C:\Windows\System32\Winevt\Logs\OSession.evtx" maximumsize="16" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Pointsec" file="C:\Windows\System32\Winevt\Logs\Pointsec.evtx" maximumsize="1.00390625" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="System" file="C:\Windows\System32\Winevt\Logs\System.evtx" maximumsize="80" overwritepolicy="WhenNeeded" />
+  <eventlogfile name="Windows PowerShell" file="C:\Windows\System32\Winevt\Logs\Windows PowerShell.evtx" maximumsize="15" overwritepolicy="WhenNeeded" />
+ </eventlogfiles>
+ <localgroups>
+  <group name="__vmware__">
+  </group>
+  <group name="Administrators">
+   <member name="CSCGBRAE652639\CSCCOMTECH" />
+   <member name="CSCGBRAE652639\Manager(REMOVE)" />
+   <member name="EMEA\Domain Admins" />
+   <member name="EMEA\Delg-G-WksAdmins-ISG-UK&#38;I" />
+   <member name="EMEA\sbarker23" />
+  </group>
+  <group name="Backup Operators">
+  </group>
+  <group name="Cryptographic Operators">
+  </group>
+  <group name="Debugger Users">
+   <member name="CSCGBRAE652639\Manager(REMOVE)" />
+  </group>
+  <group name="Distributed COM Users">
+  </group>
+  <group name="Event Log Readers">
+  </group>
+  <group name="Guests">
+   <member name="CSCGBRAE652639\Guest" />
+  </group>
+  <group name="IIS_IUSRS">
+   <member name="CSCGBRAE652639\IUSR" />
+  </group>
+  <group name="Network Configuration Operators">
+  </group>
+  <group name="Performance Log Users">
+  </group>
+  <group name="Performance Monitor Users">
+  </group>
+  <group name="Power Users">
+  </group>
+  <group name="Remote Desktop Users">
+  </group>
+  <group name="Replicator">
+  </group>
+  <group name="Users">
+   <member name="CSCGBRAE652639\INTERACTIVE" />
+   <member name="CSCGBRAE652639\Authenticated Users" />
+   <member name="CSCGBRAE652639\Manager(REMOVE)" />
+   <member name="EMEA\Domain Users" />
+  </group>
+ </localgroups>
+ <localusers>
+  <user name="___VMware_Conv_SA___" description="Dedicated User to run VMware Converter Standalone server jobs." />
+  <user name="CSCCOMTECH" description="Built-in account for administering the computer/domain" />
+  <user name="Guest" description="Built-in account for guest access to the computer/domain" />
+  <user name="Manager(REMOVE)" description="The primary manager (administrator) of this computer" />
+ </localusers>
+ <printspooler location="C:\Windows\system32\spool\PRINTERS" />
+ <printers>
+  <printer name="Fax" drivername="Microsoft Shared Fax Driver" portname="SHRFAX:" />
+  <printer name="Microsoft XPS Document Writer" drivername="Microsoft XPS Document Writer" portname="XPSPort:" />
+  <printer name="PDF-XChange 3.0" drivername="PDF-XChange 3.0" portname="PDF-XChange" />
+ </printers>
+ <regional timezone="(UTC) Dublin, Edinburgh, Lisbon, London" />
+ <processes>
+  <process caption="AcDeskBandHlpr.exe" executablepath="C:\Program Files (x86)\Lenovo\Access Connections\AcDeskBandHlpr.exe" />
+  <process caption="AcPrfMgrSvc.exe" executablepath="" />
+  <process caption="AcSvc.exe" executablepath="" />
+  <process caption="arubanetsvc.exe" executablepath="" />
+  <process caption="atashost.exe" executablepath="" />
+  <process caption="AtService.exe" executablepath="" />
+  <process caption="audiodg.exe" executablepath="" />
+  <process caption="BTTray.exe" executablepath="C:\Program Files\ThinkPad\Bluetooth Software\BTTray.exe" />
+  <process caption="btwdins.exe" executablepath="" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="chrome.exe" executablepath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+  <process caption="ClearPassOnGuard.exe" executablepath="C:\Program Files\Aruba Networks\ClearPassOnGuard\ClearPassOnGuard.exe" />
+  <process caption="cmd.exe" executablepath="" />
+  <process caption="cmd.exe" executablepath="C:\Windows\system32\cmd.exe" />
+  <process caption="concentr.exe" executablepath="C:\Program Files (x86)\Citrix\ICA Client\concentr.exe" />
+  <process caption="conhost.exe" executablepath="" />
+  <process caption="conhost.exe" executablepath="C:\Windows\system32\conhost.exe" />
+  <process caption="conhost.exe" executablepath="" />
+  <process caption="conhost.exe" executablepath="C:\Windows\system32\conhost.exe" />
+  <process caption="cptray.exe" executablepath="C:\Program Files (x86)\Common Files\Check Point\UIFramework\cptray.exe" />
+  <process caption="CSC-ENG-ForwardTogether-1.0.0-GBL-R1.exe" executablepath="" />
+  <process caption="cscript.exe" executablepath="C:\Windows\system32\cscript.exe" />
+  <process caption="csrss.exe" executablepath="" />
+  <process caption="csrss.exe" executablepath="" />
+  <process caption="cvpnd.exe" executablepath="" />
+  <process caption="disknet.exe" executablepath="" />
+  <process caption="DNTray.exe" executablepath="C:\Program Files (x86)\CheckPoint\Tray\DNTray.exe" />
+  <process caption="DTS.exe" executablepath="" />
+  <process caption="dwm.exe" executablepath="C:\Windows\system32\Dwm.exe" />
+  <process caption="DZSVC64.EXE" executablepath="" />
+  <process caption="EMET_Agent.exe" executablepath="c:\Program Files (x86)\EMET 5.1\EMET_Agent.exe" />
+  <process caption="EMET_Service.exe" executablepath="" />
+  <process caption="enstart64.exe" executablepath="" />
+  <process caption="EXCEL.EXE" executablepath="C:\Program Files (x86)\Microsoft Office\Office12\EXCEL.EXE" />
+  <process caption="explorer.exe" executablepath="C:\Windows\Explorer.EXE" />
+  <process caption="F5InstallerService.exe" executablepath="" />
+  <process caption="FireSvc.exe" executablepath="" />
+  <process caption="FlashUtil64_16_0_0_305_ActiveX.exe" executablepath="C:\Windows\system32\Macromed\Flash\FlashUtil64_16_0_0_305_ActiveX.exe" />
+  <process caption="FrameworkService.exe" executablepath="" />
+  <process caption="hkcmd.exe" executablepath="C:\Windows\System32\hkcmd.exe" />
+  <process caption="ibmpmsvc.exe" executablepath="" />
+  <process caption="ielowutil.exe" executablepath="C:\Program Files (x86)\Internet Explorer\IELowutil.exe" />
+  <process caption="iexplore.exe" executablepath="C:\Program Files\Internet Explorer\iexplore.exe" />
+  <process caption="iexplore.exe" executablepath="C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE" />
+  <process caption="iexplore.exe" executablepath="C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE" />
+  <process caption="igfxext.exe" executablepath="C:\Windows\system32\igfxext.exe" />
+  <process caption="igfxpers.exe" executablepath="C:\Windows\System32\igfxpers.exe" />
+  <process caption="igfxsrvc.exe" executablepath="C:\Windows\system32\igfxsrvc.exe" />
+  <process caption="java.exe" executablepath="" />
+  <process caption="LMS.exe" executablepath="" />
+  <process caption="lsass.exe" executablepath="" />
+  <process caption="lsm.exe" executablepath="" />
+  <process caption="lvvsst.exe" executablepath="" />
+  <process caption="mcshield.exe" executablepath="" />
+  <process caption="McTray.exe" executablepath="C:\Program Files (x86)\McAfee\Common Framework\McTray.exe" />
+  <process caption="mdm.exe" executablepath="" />
+  <process caption="mfeann.exe" executablepath="" />
+  <process caption="mfefire.exe" executablepath="" />
+  <process caption="mfevtps.exe" executablepath="" />
+  <process caption="naPrdMgr.exe" executablepath="" />
+  <process caption="nlnotes.exe" executablepath="C:\Program Files (x86)\IBM\Lotus\Notes\NLNOTES.EXE" />
+  <process caption="notepad++.exe" executablepath="" />
+  <process caption="notes2.exe" executablepath="C:\Program Files (x86)\IBM\Lotus\Notes\framework\rcp\eclipse\plugins\com.ibm.rcp.base_6.2.2.20111108-2230\win32\x86\notes2.exe" />
+  <process caption="nsd.exe" executablepath="" />
+  <process caption="ntaskldr.exe" executablepath="C:\Program Files (x86)\IBM\Lotus\Notes\ntaskldr.EXE" />
+  <process caption="ntmulti.exe" executablepath="" />
+  <process caption="NvcSvcMgr.exe" executablepath="" />
+  <process caption="P95tray.exe" executablepath="C:\Program Files (x86)\Pointsec\Pointsec for PC\P95tray.exe" />
+  <process caption="pmefsvc.exe" executablepath="" />
+  <process caption="pmelog.exe" executablepath="" />
+  <process caption="pmelp.exe" executablepath="" />
+  <process caption="pmepol.exe" executablepath="" />
+  <process caption="pmestart.exe" executablepath="C:\Program Files (x86)\CheckPoint\File Encryption\Program\pmestart.exe" />
+  <process caption="PresentationFontCache.exe" executablepath="" />
+  <process caption="PrivacyIconClient.exe" executablepath="C:\Program Files (x86)\Common Files\Intel\Privacy Icon\PrivacyIconClient.exe" />
+  <process caption="Prot_srv.exe" executablepath="" />
+  <process caption="pstartSr.exe" executablepath="" />
+  <process caption="pull.exe" executablepath="C:\Users\sbarker23\AppData\Local\ATT Connect\Participant\pull.exe" />
+  <process caption="Receiver.exe" executablepath="C:\Program Files (x86)\Citrix\ICA Client\Receiver\Receiver.exe" />
+  <process caption="rundll32.exe" executablepath="C:\Windows\SysWOW64\rundll32.exe" />
+  <process caption="rundll32.exe" executablepath="C:\Windows\system32\rundll32.exe" />
+  <process caption="SearchFilterHost.exe" executablepath="" />
+  <process caption="SearchIndexer.exe" executablepath="" />
+  <process caption="SearchProtocolHost.exe" executablepath="" />
+  <process caption="SelfServicePlugin.exe" executablepath="C:\Program Files (x86)\Citrix\SelfServicePlugin\SelfServicePlugin.exe" />
+  <process caption="services.exe" executablepath="" />
+  <process caption="smss.exe" executablepath="" />
+  <process caption="spoolsv.exe" executablepath="" />
+  <process caption="sprtcmd.exe" executablepath="C:\Program Files (x86)\SupportSoft_Amer_CSCi_7\bin\sprtcmd.exe" />
+  <process caption="sprtsvc.exe" executablepath="" />
+  <process caption="sum-amd64.exe" executablepath="" />
+  <process caption="SvcGuiHlpr.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="svchost.exe" executablepath="" />
+  <process caption="SynTPEnh.exe" executablepath="C:\Program Files\Synaptics\SynTP\SynTPEnh.exe" />
+  <process caption="SynTPHelper.exe" executablepath="" />
+  <process caption="SynTPLpr.exe" executablepath="C:\Program Files\Synaptics\SynTP\SynTPLpr.exe" />
+  <process caption="System" executablepath="" />
+  <process caption="System Idle Process" executablepath="" />
+  <process caption="taskhost.exe" executablepath="C:\Windows\system32\taskhost.exe" />
+  <process caption="tgsrvc.exe" executablepath="" />
+  <process caption="tphkload.exe" executablepath="" />
+  <process caption="TPHKSVC.exe" executablepath="" />
+  <process caption="TPONSCR.exe" executablepath="C:\Program Files\Lenovo\HOTKEY\TPONSCR.exe" />
+  <process caption="TPOSDSVC.exe" executablepath="C:\Program Files\LENOVO\HOTKEY\tposdsvc.exe" />
+  <process caption="TpScrex.exe" executablepath="C:\Program Files\Lenovo\Zoom\TpScrex.exe" />
+  <process caption="TpShocks.exe" executablepath="C:\Windows\System32\TpShocks.exe" />
+  <process caption="Tuner.exe" executablepath="" />
+  <process caption="UdaterUI.exe" executablepath="C:\Program Files (x86)\McAfee\Common Framework\UdaterUI.exe" />
+  <process caption="UI0Detect.exe" executablepath="" />
+  <process caption="UNS.exe" executablepath="" />
+  <process caption="virtscrl.exe" executablepath="" />
+  <process caption="vmnat.exe" executablepath="" />
+  <process caption="vmnetdhcp.exe" executablepath="" />
+  <process caption="vmplayer.exe" executablepath="C:\Program Files (x86)\VMware\VMware Player\vmplayer.exe" />
+  <process caption="vmware-authd.exe" executablepath="" />
+  <process caption="vmware-converter.exe" executablepath="" />
+  <process caption="vmware-converter.exe" executablepath="" />
+  <process caption="vmware-converter-a.exe" executablepath="" />
+  <process caption="vmware-unity-helper.exe" executablepath="C:\Program Files (x86)\VMware\VMware Player\vmware-unity-helper.exe" />
+  <process caption="vmware-usbarbitrator64.exe" executablepath="" />
+  <process caption="vmware-vmx.exe" executablepath="C:\Program Files (x86)\VMware\VMware Player\x64\vmware-vmx.exe" />
+  <process caption="vstskmgr.exe" executablepath="" />
+  <process caption="wfcrun32.exe" executablepath="C:\Program Files (x86)\Citrix\ICA Client\wfcrun32.exe" />
+  <process caption="wfica32.exe" executablepath="C:\PROGRA~2\Citrix\ICACLI~1\WFICA32.EXE" />
+  <process caption="wininit.exe" executablepath="" />
+  <process caption="winlogon.exe" executablepath="" />
+  <process caption="WmiPrvSE.exe" executablepath="" />
+ </processes>
+ <services>
+  <service name="AcPrfMgrSvc" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="AcSvc" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="ActiveX Installer (AxInstSV)" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="AD Monitor" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Adaptive Brightness" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Adobe Flash Player Update Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Application Experience" startmode="Manual" started="True" startname="localSystem" />
+  <service name="Application Identity" startmode="Manual" started="False" startname="NT Authority\LocalService" />
+  <service name="Application Information" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Application Layer Gateway Service" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Application Management" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="ASP.NET State Service" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="AuthenTec Fingerprint Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Background Intelligent Transfer Service" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Base Filtering Engine" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="BitLocker Drive Encryption Service" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Block Level Backup Engine Service" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Bluetooth Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Bluetooth Support Service" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="BranchCache" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Certificate Propagation" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Check Point ESME Client Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Cisco Systems, Inc. VPN Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="ClearPass Agent Controller" startmode="Auto" started="False" startname="LocalSystem" />
+  <service name="ClearPass VPN Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="CNG Key Isolation" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="COM+ Event System" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="COM+ System Application" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Computer Browser" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Credential Manager" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Cryptographic Services" startmode="Auto" started="True" startname="NT Authority\NetworkService" />
+  <service name="cscmarimba" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Data Transfer Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="DCOM Server Process Launcher" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Desktop Window Manager Session Manager" startmode="Auto" started="True" startname="localSystem" />
+  <service name="DHCP Client" startmode="Auto" started="True" startname="NT Authority\LocalService" />
+  <service name="Diagnostic Policy Service" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Diagnostic Service Host" startmode="Manual" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Diagnostic System Host" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Disk Defragmenter" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Distributed Link Tracking Client" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Distributed Transaction Coordinator" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="DNS Client" startmode="Auto" started="True" startname="NT AUTHORITY\NetworkService" />
+  <service name="Encrypting File System (EFS)" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="enstart64" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Extensible Authentication Protocol" startmode="Manual" started="True" startname="localSystem" />
+  <service name="F5 Networks Component Installer" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Fax" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="File Encryption Logging Service" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="File Encryption Policy Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="File Encryption Service" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Function Discovery Provider Host" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Function Discovery Resource Publication" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Google Update Service (gupdate)" startmode="Auto" started="False" startname="LocalSystem" />
+  <service name="Google Update Service (gupdatem)" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Group Policy Client" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Health Key and Certificate Management" startmode="Manual" started="False" startname="localSystem" />
+  <service name="HomeGroup Provider" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="HsfXAudioService" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Human Interface Device Access" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="IKE and AuthIP IPsec Keying Modules" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="InstallDriver Table Manager" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Intel(R) Management and Security Application Local Management Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Intel(R) Management and Security Application User Notification Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Interactive Services Detection" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Internet Connection Sharing (ICS)" startmode="Disabled" started="False" startname="LocalSystem" />
+  <service name="IP Helper" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="IPsec Policy Agent" startmode="Manual" started="True" startname="NT Authority\NetworkService" />
+  <service name="KtmRm for Distributed Transaction Coordinator" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Lenovo Auto Scroll" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Lenovo Doze Mode Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Lenovo Hotkey Client Loader" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Lenovo Microphone Mute" startmode="Auto" started="False" startname="LocalSystem" />
+  <service name="Link-Layer Topology Discovery Mapper" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Lotus Notes Diagnostics" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Machine Debug Manager" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="McAfee Firewall Core Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="McAfee Framework Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="McAfee Host Intrusion Prevention Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="McAfee McShield" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="McAfee Task Manager" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="McAfee Validation Trust Protection Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Media Center Extender Service" startmode="Disabled" started="False" startname="NT Authority\LocalService" />
+  <service name="Microsoft .NET Framework NGEN v2.0.50727_X64" startmode="Disabled" started="False" startname="LocalSystem" />
+  <service name="Microsoft .NET Framework NGEN v2.0.50727_X86" startmode="Disabled" started="False" startname="LocalSystem" />
+  <service name="Microsoft .NET Framework NGEN v4.0.30319_X64" startmode="Auto" started="False" startname="LocalSystem" />
+  <service name="Microsoft .NET Framework NGEN v4.0.30319_X86" startmode="Auto" started="False" startname="LocalSystem" />
+  <service name="Microsoft EMET Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Microsoft iSCSI Initiator Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Microsoft Office Diagnostics Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Microsoft Software Shadow Copy Provider" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Mozilla Maintenance Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Multimedia Class Scheduler" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Multi-user Cleanup Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Net.Msmq Listener Adapter" startmode="Disabled" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Net.Pipe Listener Adapter" startmode="Disabled" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Net.Tcp Listener Adapter" startmode="Disabled" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Net.Tcp Port Sharing Service" startmode="Disabled" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Netlogon" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Network Access Protection Agent" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Network Connections" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Network List Service" startmode="Manual" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Network Location Awareness" startmode="Auto" started="True" startname="NT AUTHORITY\NetworkService" />
+  <service name="Network Store Interface Service" startmode="Auto" started="True" startname="NT Authority\LocalService" />
+  <service name="Nortel VPN Client" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Office Source Engine" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Offline Files" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="On Screen Display" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Parental Controls" startmode="Manual" started="False" startname="NT Authority\LocalService" />
+  <service name="Peer Name Resolution Protocol" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Peer Networking Grouping" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Peer Networking Identity Manager" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Performance Counter DLL Host" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Performance Logs &#38; Alerts" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Plug and Play" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="PnP-X IP Bus Enumerator" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="PNRP Machine Name Publication Service" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Pointsec" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Pointsec Service Start" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Portable Device Enumerator Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Power" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Power Manager DBC Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Print Spooler" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Problem Reports and Solutions Control Panel Support" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Program Compatibility Assistant Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Protected Storage" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Quality Windows Audio Video Experience" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Remote Access Auto Connection Manager" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Remote Access Connection Manager" startmode="Manual" started="True" startname="localSystem" />
+  <service name="Remote Desktop Configuration" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Remote Desktop Services" startmode="Manual" started="False" startname="NT Authority\NetworkService" />
+  <service name="Remote Desktop Services UserMode Port Redirector" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Remote Procedure Call (RPC)" startmode="Auto" started="True" startname="NT AUTHORITY\NetworkService" />
+  <service name="Remote Procedure Call (RPC) Locator" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Remote Registry" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Routing and Remote Access" startmode="Disabled" started="False" startname="localSystem" />
+  <service name="RPC Endpoint Mapper" startmode="Auto" started="True" startname="NT AUTHORITY\NetworkService" />
+  <service name="Secondary Logon" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Secure Socket Tunneling Protocol Service" startmode="Manual" started="True" startname="NT Authority\LocalService" />
+  <service name="Security Accounts Manager" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Security Center" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Server" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Shell Hardware Detection" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Smart Card" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Smart Card Removal Policy" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="SNMP Trap" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Software Protection" startmode="Auto" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="SPP Notification Service" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="SSDP Discovery" startmode="Manual" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Storage Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Superfetch" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="SupportSoft Repair Service (supportsoft_amer_csci_7)" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="SupportSoft Sprocket Service (supportsoft_amer_csci_7)" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="System Event Notification Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Tablet PC Input Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Task Scheduler" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="TCP/IP NetBIOS Helper" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Telephony" startmode="Manual" started="True" startname="NT AUTHORITY\NetworkService" />
+  <service name="Themes" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="ThinkPad HDD APS Logging Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="ThinkPad PM Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Thread Ordering Server" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="TPM Base Services" startmode="Manual" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="UPnP Device Host" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="User Profile Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Virtual Disk" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="VMware Authorization Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="VMware DHCP Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="VMware NAT Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="VMware USB Arbitration Service" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="VMware vCenter Converter Standalone Agent" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="VMware vCenter Converter Standalone Server" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="VMware vCenter Converter Standalone Worker" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Volume Shadow Copy" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="WebClient" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="WebEx Service Host for Support Center" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Windows Activation Technologies Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Windows Audio" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Windows Audio Endpoint Builder" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Windows Backup" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Windows Biometric Service" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Windows CardSpace" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Windows Color System" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Windows Connect Now - Config Registrar" startmode="Manual" started="False" startname="NT AUTHORITY\LocalService" />
+  <service name="Windows Defender" startmode="Manual" started="False" startname="LocalSystem" />
+  <service name="Windows Driver Foundation - User-mode Driver Framework" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Windows Error Reporting Service" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Windows Event Collector" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Windows Event Log" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Windows Firewall" startmode="Disabled" started="False" startname="NT Authority\LocalService" />
+  <service name="Windows Font Cache Service" startmode="Auto" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Windows Image Acquisition (WIA)" startmode="Auto" started="True" startname="NT Authority\LocalService" />
+  <service name="Windows Installer" startmode="Manual" started="True" startname="LocalSystem" />
+  <service name="Windows Management Instrumentation" startmode="Auto" started="True" startname="localSystem" />
+  <service name="Windows Media Center Receiver Service" startmode="Manual" started="False" startname="NT AUTHORITY\networkService" />
+  <service name="Windows Media Center Scheduler Service" startmode="Manual" started="False" startname="NT AUTHORITY\networkService" />
+  <service name="Windows Media Player Network Sharing Service" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Windows Modules Installer" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Windows Presentation Foundation Font Cache 3.0.0.0" startmode="Auto" started="True" startname="NT Authority\LocalService" />
+  <service name="Windows Remote Management (WS-Management)" startmode="Manual" started="False" startname="NT AUTHORITY\NetworkService" />
+  <service name="Windows Search" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="Windows Time" startmode="Manual" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Windows Update" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="WinHTTP Web Proxy Auto-Discovery Service" startmode="Manual" started="True" startname="NT AUTHORITY\LocalService" />
+  <service name="Wired AutoConfig" startmode="Manual" started="False" startname="localSystem" />
+  <service name="WLAN AutoConfig" startmode="Auto" started="True" startname="LocalSystem" />
+  <service name="WMI Performance Adapter" startmode="Manual" started="False" startname="localSystem" />
+  <service name="Workstation" startmode="Auto" started="True" startname="NT AUTHORITY\NetworkService" />
+  <service name="WWAN AutoConfig" startmode="Manual" started="False" startname="NT Authority\LocalService" />
+ </services>
+ <shares>
+  <share name="ADMIN$" path="C:\Windows" description="Remote Admin" />
+  <share name="C$" path="C:\" description="Default share" />
+  <share name="D$" path="D:\" description="Default share" />
+  <share name="IPC$" path="" description="Remote IPC" />
+  <share name="Temp" path="D:\Temp" description="" />
+  <share name="Virtual_Machines" path="D:\Virtual_Machines" description="" />
+ </shares>
+ <win32_startupcommand>
+  <command user="EMEA\sbarker23" name="GoogleChromeAutoLaunch_333B8AD3EB83EDF55941BBBECE964721" command="&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot; --no-startup-window" />
+  <command user="EMEA\sbarker23" name="Push Client" command="&quot;C:\Users\sbarker23\AppData\Local\ATT Connect\Participant\pull.exe&quot;" />
+  <command user="Public" name="AcWin7Hlpr" command="C:\Program Files (x86)\Lenovo\Access Connections\AcTBenabler.exe" />
+  <command user="Public" name="Bluetooth" command="C:\PROGRA~1\ThinkPad\BLUETO~1\BTTray.exe " />
+  <command user="Public" name="ClearPass OnGuard" command="C:\PROGRA~1\ARUBAN~1\CLEARP~1\CLEARP~1.EXE " />
+  <command user="Public" name="FingerPrintSoftware" command="&quot;C:\Program Files\Lenovo Fingerprint Software\fpapp.exe&quot; \s" />
+  <command user="Public" name="FingerPrintSoftwareSplashScreen" command="&quot;C:\Program Files\Lenovo Fingerprint Software\SplashScreen.exe&quot; \s" />
+  <command user="Public" name="HotKeysCmds" command="C:\Windows\system32\hkcmd.exe" />
+  <command user="Public" name="IE64bit_RemoveIcon" command="cmd /c del /f /q &quot;C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Internet Explorer (64-bit).LNK&quot;" />
+  <command user="Public" name="IgfxTray" command="C:\Windows\system32\igfxtray.exe" />
+  <command user="Public" name="McAfee Host Intrusion Prevention Tray" command="&quot;C:\Program Files\McAfee\Host Intrusion Prevention\FireTray.exe&quot;" />
+  <command user="Public" name="Persistence" command="C:\Windows\system32\igfxpers.exe" />
+  <command user="Public" name="picon" command="&quot;C:\Program Files (x86)\Common Files\Intel\Privacy Icon\PrivacyIconClient.exe&quot; -startup" />
+  <command user="Public" name="SynTPEnh" command="%ProgramFiles%\Synaptics\SynTP\SynTPEnh.exe" />
+  <command user="Public" name="TpShocks" command="TpShocks.exe" />
+  <command user="Public" name="vpngui.exe" command="C:\Windows\Installer\{5FDC06BF-3D3D-4367-8FFB-4FAFCB61972D}\Icon09DB8A851.exe -user_logon" />
+ </win32_startupcommand>
+ <pagefiles>
+ </pagefiles>
+ <registry currentsize="135" maximumsize="2048" />
+</computer>
