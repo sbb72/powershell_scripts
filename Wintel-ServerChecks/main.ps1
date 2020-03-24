@@ -58,7 +58,7 @@ $htmlArray += $SADetails | ConvertTo-HTML -As List -PreContent '<div class="row"
 $htmlArray += $SACheck.Disks.Values | Select-Object DeviceID, Size, VolumeName, "% FreeSpace" | ConvertTo-HTML -As List -PreContent '<div class="container"><h2>Current Server Disks</h2>' -Fragment -PostContent '</div>'
 $htmlArray += $SACheck.Network.values | ConvertTo-HTML -As List -PreContent '<div class="container"> <h2>Current Server Network</h2>' -Fragment -PostContent '</div></div>'
 
-$htmlArray += Get-InstalledApps | ConvertTo-HTML -PreContent '<div class="container"> <h2>List Of Applications</h2>' -Fragment -PostContent '</div></div>'
+$htmlArray += Get-InstalledApps | Sort-Object DisplayName | ConvertTo-HTML -PreContent '<div class="container"> <h2>List Of Applications</h2>' -Fragment -PostContent '</div></div>'
 
 $sftCol = @()
 $sftCol += Get-InstalledSoftware -AppName "VMware Tools" -AppArray $apparray 
