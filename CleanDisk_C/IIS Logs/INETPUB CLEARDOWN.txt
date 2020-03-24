@@ -1,0 +1,1 @@
+forfiles -p C:\Inetpub\logs\logfiles\ -s -m *.log -d -180 -c "cmd /C DEL @File"

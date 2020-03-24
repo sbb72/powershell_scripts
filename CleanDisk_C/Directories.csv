@@ -1,0 +1,26 @@
+Path,Delete,Compress,GetSize
+C:\Temp,no,no,yes
+C:\Windows\ProPatches\Patches,yes,no,yes
+C:\Windows\Logs,no,yes,no
+C:\WINDOWS\ccmsetup,no,no,no
+C:\WINDOWS\ETSSBS,no,no,no
+C:\Windows\Installer,no,yes,no
+C:\Windows\installer\$PatchCache$\Managed,yes,no,yes
+C:\ProgramData\Aternity\Logs,yes,no,yes
+C:\Windows\appslogs,yes,no,yes
+C:\Windows\installer\*.tmp,yes,no,no
+C:\Windows\installer\flash*,yes,no,no
+C:\Windows\installer\shockwave,yes,no,no
+C:\Program Files (x86)\Google\Update\Install,yes,no,yes
+C:\Program Files (x86)\Google\CrashReports,yes,no,yes
+C:\Program Files\Google\Update\Install,yes,no,yes
+C:\Windows\Temp,yes,no,yes
+C:\WINDOWS\ETSSBS,no,yes,no
+C:\WINDOWS\ccmsetup,no,yes,no
+C:\WINDOWS\Downloaded Installations,no,no,yes
+C:\Windows\SoftwareDistribution\DataStore\*.edb,yes,no,yes
+C:\Windows\SoftwareDistribution\DataStore\Logs,no,yes,no
+C:\Windows\*.dmp,yes,no,no
+C:\Windows\Minidump\*.dmp,yes,no,no
+C:\Windows\ProPatches\Installation,yes,no,no
+C:\Support,no,no,yes
