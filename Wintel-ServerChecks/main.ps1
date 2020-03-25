@@ -68,11 +68,13 @@ $sftCol += Get-InstalledSoftware -AppName "RSA Authentication Agent" -AppArray $
 $htmlArray += $sftCol | ConvertTo-HTML -As Table -PreContent '<h2>Check Installed Software</h2>' -Fragment
 
 $htmlArray += Get-WmiObject win32_service | Select-Object Displayname, State, StartMode | Sort-Object Displayname | ConvertTo-HTML -As Table -PreContent '<h2>Services</h2>' -Fragment
-<#
-$htmlArray +=   Get-WinEvent @{logname='application','system';starttime=[datetime]::Today.AddDays(-7);level=2} -ErrorAction SilentlyContinue | 
-                Select-Object logname,timecreated,id,message |
-                ConvertTo-HTML -As Table -PreContent '<h2>Events</h2>' -Fragment
 
+$htmlArray += Get-HotFix | Select-Object HotFixID, InstalledOn, InstalledBy, Description | Sort-Object InstalledOn | ConvertTo-HTML -As Table -PreContent '<h2>Hotfixes</h2>' -Fragment
+
+$htmlArray += Get-WinEvent @{logname = 'application', 'system'; starttime = [datetime]::Today.AddDays(-7); level = 2 } -ErrorAction SilentlyContinue | 
+Select-Object logname, timecreated, id, message |
+ConvertTo-HTML -As Table -PreContent '<h2>Events</h2>' -Fragment
+<#
 $htmlArray +=   Get-WmiObject Win32_PNPEntity | Where-Object {$_.status -notlike 'OK' -and $_.status -notlike $null } | 
                 Select-Object name,status,ConfigManagerErrorCode | 
                 ConvertTo-HTML -As Table -PreContent '<h2>Devices</h2>' -Fragment
