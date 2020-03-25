@@ -67,9 +67,7 @@ $sftCol += Get-InstalledSoftware -AppName "IBM BigFix Client" -AppArray $apparra
 $sftCol += Get-InstalledSoftware -AppName "RSA Authentication Agent" -AppArray $apparray 
 $htmlArray += $sftCol | ConvertTo-HTML -As Table -PreContent '<h2>Check Installed Software</h2>' -Fragment
 
-$htmlArray += Get-WmiObject win32_service | 
-Select-Object Displayname, state, StartMode | 
-ConvertTo-HTML -As Table -PreContent '<h2>Services</h2>' -Fragment
+$htmlArray += Get-WmiObject win32_service | Select-Object Displayname, State, StartMode | Sort-Object Displayname | ConvertTo-HTML -As Table -PreContent '<h2>Services</h2>' -Fragment
 <#
 $htmlArray +=   Get-WinEvent @{logname='application','system';starttime=[datetime]::Today.AddDays(-7);level=2} -ErrorAction SilentlyContinue | 
                 Select-Object logname,timecreated,id,message |
