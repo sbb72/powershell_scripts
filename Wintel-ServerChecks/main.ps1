@@ -53,8 +53,8 @@ $htmlArray += "<td><H1>$hostname - Server Troubleshooting Checks </H1>"
 $htmlArray += "<H4>Report produced on: $Date by: $env:USERNAME</H4></td></table>" 
 
 
-$SADetails = $SACheck | select-object Servername, Domain, DomainOU, Model, OS, License, CPUCount, RAM
-$htmlArray += $SADetails | ConvertTo-HTML -As List -PreContent '<div class="row"><div class="container"><h2>Current Server Details</h2>' -Fragment -PostContent '</div>'
+$SADetails = $SACheck | select-object Servername, Domain, DomainOU, Model, OS, License, CPUCount, RAM | ConvertTo-HTML -As Table -PreContent '<div class="container"> <h2>Server Details</h2>' -Fragment -PostContent -head $HeaderTable'</div></div>'
+$htmlArray += $SADetails | ConvertTo-HTML -As List -PreContent '<div class="row"><div class="container"><h2>Current Server Details</h2>' -Fragment -PostContent '</div>' -head $HeaderTable
 $htmlArray += $SACheck.Disks.Values | Select-Object DeviceID, Size, VolumeName, "% FreeSpace" | ConvertTo-HTML -As Table -PreContent '<div class="container"><h2>Current Server Disks</h2>' -Fragment -PostContent '</div>'
 $htmlArray += $SACheck.Network.values | ConvertTo-HTML -As Table -PreContent '<div class="container"> <h2>Current Server Network</h2>' -Fragment -PostContent '</div></div>'
 
