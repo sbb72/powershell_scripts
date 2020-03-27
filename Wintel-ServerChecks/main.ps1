@@ -78,18 +78,16 @@ ConvertTo-HTML -As Table -PreContent '<h2>Events</h2>' -Fragment
 $htmlArray +=   Get-WmiObject Win32_PNPEntity | Where-Object {$_.status -notlike 'OK' -and $_.status -notlike $null } | 
                 Select-Object name,status,ConfigManagerErrorCode | 
                 ConvertTo-HTML -As Table -PreContent '<h2>Devices</h2>' -Fragment
+<#
+ $htmlArray +=   Get-WindowsFeature  |
+                  Where-Object {$_. installstate -eq "installed"} |
+                  Select-Object Name | 
+                  ConvertTo-HTML -As Table -PreContent '<h2>Roles</h2>'
 #>
-#  $htmlArray +=   Get-WindowsFeature  |
-#                  Where-Object {$_. installstate -eq "installed"} |
-#                  Select-Object Name | 
-#                  ConvertTo-HTML -As Table -PreContent '<h2>Roles</h2>'
 
-$htmlArray += $apparray | ConvertTo-HTML -As Table -PreContent '<h2>Apps</h2>' -Fragment
+#$htmlArray += $apparray | ConvertTo-HTML -As Table -PreContent '<h2>Apps</h2>' -Fragment
 
 $htmlArray += $apparray | Where-Object { ($_.Displayname -like '*Update*') -or ($_.Displayname -like '*Service Pack 2*') } | ConvertTo-HTML -As Table -PreContent '<h2>Patches and Service Packs2</h2>' -Fragment
-
-###### Generate JSON ######
-#$SACheck  | ConvertTo-Json -depth 200 | Out-File $initialDirectory\$outfilename
 
 $htmlArray += "<H3>Report produced sucessfully: $Date</H3>" 
 $htmlArray += "<H2>SECURITY MARKING: DXC PROPRIETRY HANDLE AS <b>RESTRICTED</b></H2>"
