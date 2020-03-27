@@ -1,18 +1,12 @@
-. $PSScriptRoot\Get-NICs.ps1
-. $PSScriptRoot\Get-DomainOU.ps1
-. $PSScriptRoot\Get-OS.ps1
-. $PSScriptRoot\Get-CPUCount.ps1
-. $PSScriptRoot\Get-Disks.ps1
-. $PSScriptRoot\Get-CPUCount.ps1
-. $PSScriptRoot\Get-RAM.ps1
-. $PSScriptRoot\Get-NICs.ps1
-. $PSScriptRoot\Get-BindingOrder.ps1
-. $PSScriptRoot\Get-WindowsFeature.ps1
-. $PSScriptRoot\Get-License
-. $PSScriptRoot\Get-InstalledApps.ps1
-. $PSScriptRoot\Get-InstalledSoftware.ps1
-. $PSScriptRoot\Get-SurfForm.ps1
-. $PSScriptRoot\Compare-Function.ps1
-. $PSScriptRoot\Get-FileName.ps1
-. $PSScriptRoot\Save-FileAs.ps1
-. $PSScriptRoot\Write-ErrorMessage.ps1
+$cwd = (Get-Location).path + "\SAChecksModule\"
+
+foreach ($pathitem in $cwd) {
+
+    $ps1files = (Get-ChildItem -File -Path $cwd -Filter *.ps1).fullname 
+    ForEach ($ps1item in $ps1files) {
+
+        import-module $ps1item
+        Write-Host $ps1item
+    }
+  
+}
