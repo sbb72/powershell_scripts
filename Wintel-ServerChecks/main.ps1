@@ -1,5 +1,5 @@
-$modpath = (Get-Location).path
-import-module  "$modpath\SAChecksModule\SAChecks.psm1" -Force
+$modulepath = (Get-Location).path
+import-module  "$modulepath\SAChecksModule\SAChecks.psm1" -Force
 $date = Get-Date -f "HH:mm dd-MM-yyyy"
 $HeaderTable = @"
 <style>
@@ -49,7 +49,7 @@ $SACheck.PagefileLocation = (Get-WmiObject Win32_PageFileusage).Name.Trimend('pa
 
 ###### Genereate HTML fragments ######
 $htmlArray = @()
-$htmlArray += "<td><H1>$hostname - Server Troubleshooting Checks </H1>" 
+$htmlArray += "<td><H1>$env:COMPUTERNAME - Server Troubleshooting Checks </H1>" 
 $htmlArray += "<H4>Report produced on: $Date by: $env:USERNAME</H4></td></table>" 
 
 
