@@ -90,7 +90,7 @@ $params = @{
     body = $htmlArray
 }
 
-convertto-html @params | Set-CellColor | Out-File c:\temp\Test1.html
+convertto-html @params | Out-File c:\temp\Test1.html
 
 
 #$htmlArray | Out-File c:\temp\Test1.html

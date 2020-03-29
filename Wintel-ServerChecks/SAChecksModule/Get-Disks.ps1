@@ -7,7 +7,7 @@ function Get-Disks {
             Size          = [math]::Round((($individualDisk.Size) / 1GB))
             DeviceID      = $individualDisk.DeviceID
             VolumeName    = $individualDisk.VolumeName
-            "% FreeSpace" = [Math]::Round(($individualDisk.FreeSpace / 1MB) / ($individualDisk.Size / 1MB) * 100)
+            "%_FreeSpace" = [Math]::Round(($individualDisk.FreeSpace / 1MB) / ($individualDisk.Size / 1MB) * 100)
         }
     
         $ArrayOfDiskInfo += @{$diskInfo.DeviceID = $diskInfo }
