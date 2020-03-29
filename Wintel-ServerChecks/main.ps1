@@ -9,8 +9,6 @@ TD {font: 12pt Arial; border-width: 1px; padding: 3px; border-style: solid; bord
 </style>
 "@
 
-
-
 $SACheck = New-Object psobject -Property @{
     Date             = (Get-Date).ToString()
     Engineer         = $env:USERNAME
@@ -45,13 +43,10 @@ $SACheck.License = (Get-License | where { $_.Product -like "Windows*" }).Status
 $SACheck.PagefileSize = [math]::Round((Get-WmiObject Win32_PageFileusage).AllocatedBasesize / 1000, 1)
 $SACheck.PagefileLocation = (Get-WmiObject Win32_PageFileusage).Name.Trimend('pagefile.sys')
 
-
-
 ###### Genereate HTML fragments ######
 $htmlArray = @()
 $htmlArray += "<td><H1>$env:COMPUTERNAME - Server Troubleshooting Checks </H1>" 
 $htmlArray += "<H4>Report produced on: $Date by: $env:USERNAME</H4></td></table>" 
-
 
 $SADetails = $SACheck | select-object Servername, Domain, DomainOU, Model, OS, License, CPUCount, RAM
 $htmlArray += $SADetails | ConvertTo-HTML -As List -PreContent '<div class="row"><div class="container"><h2>Current Server Details</h2>' -Fragment -PostContent '</div>'
@@ -87,12 +82,9 @@ $htmlArray +=   Get-WmiObject Win32_PNPEntity | Where-Object {$_.status -notlike
 
 #$htmlArray += $apparray | ConvertTo-HTML -As Table -PreContent '<h2>Apps</h2>' -Fragment
 
-$htmlArray += $apparray | Where-Object { ($_.Displayname -like '*Update*') -or ($_.Displayname -like '*Service Pack 2*') } | ConvertTo-HTML -As Table -PreContent '<h2>Patches and Service Packs2</h2>' -Fragment
-
 $htmlArray += "<H3>Report produced sucessfully: $Date</H3>" 
 $htmlArray += "<H2>SECURITY MARKING: DXC PROPRIETRY HANDLE AS <b>RESTRICTED</b></H2>"
 
-$head = Get-content .\HtmlReportHeader.html
 $params = @{
     head = $HeaderTable
     body = $htmlArray
