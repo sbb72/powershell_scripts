@@ -1,5 +1,5 @@
-$cwd = (Get-Location).path
-import-module  "$cwd\SAChecksModule\SAChecks.psm1" -Force
+$modpath = (Get-Location).path
+import-module  "$modpath\SAChecksModule\SAChecks.psm1" -Force
 $date = Get-Date -f "HH:mm dd-MM-yyyy"
 $HeaderTable = @"
 <style>
@@ -92,4 +92,13 @@ $htmlArray += $apparray | Where-Object { ($_.Displayname -like '*Update*') -or (
 $htmlArray += "<H3>Report produced sucessfully: $Date</H3>" 
 $htmlArray += "<H2>SECURITY MARKING: DXC PROPRIETRY HANDLE AS <b>RESTRICTED</b></H2>"
 
-$htmlArray | Out-File c:\temp\Test1.html
+$head = Get-content .\HtmlReportHeader.html
+$params = @{
+    head = $HeaderTable
+    body = $htmlArray
+}
+
+convertto-html @params | Out-File c:\temp\Test1.html
+
+
+#$htmlArray | Out-File c:\temp\Test1.html
