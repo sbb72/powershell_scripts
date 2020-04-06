@@ -52,7 +52,7 @@ $SADetails = $SACheck | select-object Servername, Domain, DomainOU, Model, OS, L
 $htmlArray += $SADetails | ConvertTo-HTML -As List -PreContent '<div class="row"><div class="container"><h2>Current Server Details</h2>' -Fragment -PostContent '</div>'
 #$htmlArray += $SACheck.Disks.Values | Select-Object DeviceID, Size, VolumeName, "%_FreeSpace" | ConvertTo-HTML -As Table -PreContent '<div class="container"><h2>Current Server Disks</h2>' -Fragment -PostContent '</div>'
 $htmlArray += ConvertTo-HTML -PreContent '<div class="container"><h2>Current Server Disks</h2>' -Fragment -PostContent '</div>'
-$htmlArray += $SACheck.Disks.Values | Select-Object DeviceID, Size, VolumeName, "%_FreeSpace" | ConvertTo-HTML -As Table | set-cellcolor -property "%_FreeSpace" -color red -filter "%_FreeSpace -gt 50"
+$htmlArray += $SACheck.Disks.Values | Select-Object DeviceID, Size, VolumeName, "%_FreeSpace" | ConvertTo-HTML -As Table | set-cellcolor -property "%_FreeSpace" -color red -filter "%_FreeSpace -lt 20" -row
 $htmlArray += $SACheck.Network.values | ConvertTo-HTML -As Table -PreContent '<div class="container"> <h2>Current Server Network</h2>' -Fragment -PostContent '</div></div>'
 
 $htmlArray += Get-InstalledApps | Sort-Object DisplayName | ConvertTo-HTML -PreContent '<div class="container"> <h2>List Of Applications</h2>' -Fragment -PostContent '</div></div>'
