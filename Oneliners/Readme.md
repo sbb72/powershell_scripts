@@ -4,3 +4,6 @@ import-csv c:\path | foreach {Set-GPPermissions -name GPOName -Permissionlevel g
 Remove Objects from Security Filtering
 import-csv c:\path | foreach {Set-GPPermissions -name GPOName -Permissionlevel none -TargetName $_.server -TargetType Computer}
 
+List permissions
+Get-GPPermissions -name GPOName -all | FT
+
