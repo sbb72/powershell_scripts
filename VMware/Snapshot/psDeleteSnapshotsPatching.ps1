@@ -1,4 +1,9 @@
-﻿try
+﻿Get-VM server | Get-Snapshot | Where {$_.name -like "#Patching#*"} | Remove-Shapshot
+
+
+
+
+try
 { $vCenterConnection = Connect-VIServer $ComputerName -WarningVariable vCenterConnectWarnings -ErrorVariable vCenterConnectErrors }
 catch
 {        
