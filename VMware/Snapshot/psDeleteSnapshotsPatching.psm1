@@ -11,7 +11,7 @@
 
         [int]$SnapshotAge = 7
     )
-    $PatchingDate = Get-date -f dd-MM-yyyy
+    $PatchingDate = Get-date -f dd-MM-yyyy_HH:mm
     
     Add-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue 
    
