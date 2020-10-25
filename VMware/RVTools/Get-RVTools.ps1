@@ -1,5 +1,18 @@
-# -----------------------------------------------------
-#$Output = $strDate+"_"+$VCServer
+<#
+.DESCRIPTION
+This script has been created to export vCenter information via RVTools
+.INPUTS
+List of vcenter servers you want to export information for.
+.OUTPUTS
+Output file stored in $outputfile location
+.NOTES
+  Version:        1.0
+  Author:         SBarker
+  Creation Date:  25-10-2020
+  Purpose/Change: Initial script  
+Version 1.0
+Purpose/Change: Initial script  
+#>
 Function createdirectory {
     param ($folderpath,
         $newfolder)
@@ -14,8 +27,17 @@ $sdmdev = "\\glkasad14140v\d$\incoming_reports\RVTools\"
 $sdmprod = "\\glkasad14141v\d$\incoming_reports\RVTools\"
 $XlsxDir1 = "D:\RVTools\" #add servername as folder $Output = $XlsxDir1+"RvToolsLog.csv"
 $ServerlistErrorLog = "D:\RVTools\" + $strDate + "_Error.log"
-$rvtoolslog = @()
 
+$emailhash = @{
+    from       = "server1@somedomain.local"
+    to         = "admin@somedomain.com"
+    body       = "Test body"
+    subject    = "Test subject"
+    smtpserver = "server1"
+    attachment = "$XlsxDir1$VCServer\$XlsxFile1"
+}
+
+$rvtoolslog = @()
 
 #Get Server list
 try {
@@ -111,6 +133,9 @@ Foreach ($VCServer in $Servers) {
         }
     }
     $rvtoolslog += $rvtoolsdata
+    Send-MailMessage @emailhash
 }
 
 return $rvtoolslog | Select Server, ServerList, Date, ExportFailed, CopytoDev, CopytoProd | Export-Csv -Path $Output -NoTypeInformation
+
+Send-MailMessage -to "" -From "" -SmtpServer "" -Subject "Execution Log: Daily $env:userdomain Server AD Extract" -Body "Please find attached the execution log for the Powershell script" -Attachments $log
