@@ -26,11 +26,12 @@ catch { New-Item -Path $ServerlistErrorLog -ItemType File -Force $_.exception.me
 
 Foreach ($VCServer in $Servers) {
 
-    $rvtoolsdata = New-Object psobject -Property @{ Date = Get-date -f dd-MM-yyyy_HH:mm Server=""
-        ServerList                                       = ""
-        ExportFailed                                     = ""
-        CopytoDev                                        = ""
-        CopytoProd                                       = ""
+    $rvtoolsdata = New-Object psobject -Property @{ 
+        Date         = Get-date -f dd-MM-yyyy_HH:mm Server=""
+        ServerList   = ""
+        ExportFailed = ""
+        CopytoDev    = ""
+        CopytoProd   = ""
     }
 
 
@@ -78,7 +79,7 @@ Foreach ($VCServer in $Servers) {
             Write-Host "Creating folder $sdmdev$VCServer"
             createdirectory -folderpath $sdmdev -newfolder $VCServer
             try {
-                Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$sdmdev$VCServer" -Force
+                Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$sdmdev$VCServer" -Force -ErrorAction stop
                 $rvtoolsdata.CopytoDev = "OK"
             }
             catch {
