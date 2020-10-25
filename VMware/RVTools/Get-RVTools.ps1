@@ -1,6 +1,8 @@
 <#
 .DESCRIPTION
-This script has been created to export vCenter information via RVTools
+This script has been created to export vCenter information via RVTools.
+Option to send the exported data vian email.
+Option to copy the files to a remote UNC path
 .INPUTS
 List of vcenter servers you want to export information for.
 .OUTPUTS
@@ -20,6 +22,31 @@ Function createdirectory {
     New-Item -ItemType Directory "$folderpath$newfolder"
 }
 
+Function copyfiles {
+    param ($serverpath
+    )
+    If (Test-Path "$serverpath$VCServer") {
+        Write-Host "EXISTS"
+        try {
+            Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$serverpath$VCServer" -Force -ErrorAction stop
+            $rvtoolsdata.CopytoDev = "OK"
+        }
+        catch {
+            $rvtoolsdata.CopytoDev = "FAILED"
+        }
+    }
+    ELSE {
+        Write-Host "Creating folder $serverpath$VCServer"
+        createdirectory -folderpath $serverpath -newfolder $VCServer
+        try {
+            Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$serverpath$VCServer" -Force -ErrorAction stop
+            $rvtoolsdata.CopytoDev = "OK"
+        }
+        catch {
+            $rvtoolsdata.CopytoDev = "FAILED"
+        }
+    }
+}
 
 #Variables
 $strDate = Get-date -f dd-MM-yyyy
@@ -86,56 +113,14 @@ Foreach ($VCServer in $Servers) {
     }
     ELSE {
         $rvtoolsdata.Export = "OK"
+        #Used to copy to SDM Servers
         #Copying to dev
-        If (Test-Path "$sdmdev$VCServer") {
-            Write-Host "EXISTS"
-            try {
-                Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$sdmdev$VCServer" -Force -ErrorAction stop
-                $rvtoolsdata.CopytoDev = "OK"
-            }
-            catch {
-                $rvtoolsdata.CopytoDev = "FAILED"
-            }
-        }
-        ELSE {
-            Write-Host "Creating folder $sdmdev$VCServer"
-            createdirectory -folderpath $sdmdev -newfolder $VCServer
-            try {
-                Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$sdmdev$VCServer" -Force -ErrorAction stop
-                $rvtoolsdata.CopytoDev = "OK"
-            }
-            catch {
-                $rvtoolsdata.CopytoDev = "FAILED"
-            }
-        }
-
-        #Copying to prod
-        If (Test-Path "$sdmprod$VCServer") {
-            try {
-                Write-Host "EXISTS"
-                Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$sdmprod$VCServer" -Force -ErrorAction stop
-                $rvtoolsdata.CopytoProd = "OK"
-            }
-            catch {
-                $rvtoolsdata.CopytoProd = "FAILED"
-            }
-        }
-        ELSE {
-            Write-Host "Creating folder $sdmprod$VCServer"
-            createdirectory -folderpath $sdmprod -newfolder $VCServer
-            try {
-                Copy-Item "$XlsxDir1$VCServer\$XlsxFile1" "$sdmprod$VCServer" -Force -ErrorAction stop
-                $rvtoolsdata.CopytoProd = "OK"
-            }
-            catch {
-                $rvtoolsdata.CopytoProd = "FAILED"
-            }
-        }
+        copyfiles -serverpath $sdmdev
+        #Copying to Prod
+        copyfiles -serverpath $sdmdev
     }
     $rvtoolslog += $rvtoolsdata
     Send-MailMessage @emailhash
 }
 
 return $rvtoolslog | Select Server, ServerList, Date, Export, CopytoDev, CopytoProd | Export-Csv -Path $Output -NoTypeInformation
-
-Send-MailMessage -to "" -From "" -SmtpServer "" -Subject "Execution Log: Daily $env:userdomain Server AD Extract" -Body "Please find attached the execution log for the Powershell script" -Attachments $log
