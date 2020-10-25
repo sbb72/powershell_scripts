@@ -49,11 +49,11 @@ catch { New-Item -Path $ServerlistErrorLog -ItemType File -Force $_.exception.me
 Foreach ($VCServer in $Servers) {
 
     $rvtoolsdata = New-Object psobject -Property @{ 
-        Date         = Get-date -f dd-MM-yyyy_HH:mm Server=""
-        ServerList   = ""
-        ExportFailed = ""
-        CopytoDev    = ""
-        CopytoProd   = ""
+        Date       = Get-date -f dd-MM-yyyy_HH:mm Server=""
+        ServerList = ""
+        Export     = ""
+        CopytoDev  = ""
+        CopytoProd = ""
     }
 
 
@@ -80,12 +80,12 @@ Foreach ($VCServer in $Servers) {
     $Process = Start-Process -FilePath ".\RVTools.exe" -ArgumentList $Arguments -NoNewWindow -Wait -PassThru
 
     if ($Process.ExitCode -eq -1) {
-        $rvtoolsdata.ExportFailed = "YES"
+        $rvtoolsdata.Export = "Failed"
         Write-Host "Error: Export failed! RVTools returned exitcode -1, probably a connection error! Script is stopped" -ForegroundColor Red
         #exit 1
     }
     ELSE {
-        $rvtoolsdata.ExportFailed = "NO"
+        $rvtoolsdata.Export = "OK"
         #Copying to dev
         If (Test-Path "$sdmdev$VCServer") {
             Write-Host "EXISTS"
@@ -136,6 +136,6 @@ Foreach ($VCServer in $Servers) {
     Send-MailMessage @emailhash
 }
 
-return $rvtoolslog | Select Server, ServerList, Date, ExportFailed, CopytoDev, CopytoProd | Export-Csv -Path $Output -NoTypeInformation
+return $rvtoolslog | Select Server, ServerList, Date, Export, CopytoDev, CopytoProd | Export-Csv -Path $Output -NoTypeInformation
 
 Send-MailMessage -to "" -From "" -SmtpServer "" -Subject "Execution Log: Daily $env:userdomain Server AD Extract" -Body "Please find attached the execution log for the Powershell script" -Attachments $log
