@@ -50,8 +50,8 @@ Function copyfiles {
 
 #Variables
 $strDate = Get-date -f dd-MM-yyyy
-$sdmdev = "\\glkasad14140v\d$\incoming_reports\RVTools\"
-$sdmprod = "\\glkasad14141v\d$\incoming_reports\RVTools\"
+$sdmdev = "server1"
+$sdmprod = "server2"
 $XlsxDir1 = "D:\RVTools\" #add servername as folder $Output = $XlsxDir1+"RvToolsLog.csv"
 $ServerlistErrorLog = "D:\RVTools\" + $strDate + "_Error.log"
 
