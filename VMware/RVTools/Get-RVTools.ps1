@@ -2,18 +2,17 @@
 .DESCRIPTION
 This script has been created to export vCenter information via RVTools.
 Option to send the exported data vian email.
-Option to copy the files to a remote UNC path
-.INPUTS
-List of vcenter servers you want to export information for.
+Option to copy the files to a remote UNC path .INPUTS List of vcenter servers you want to export information for.
 .OUTPUTS
-Output file stored in $outputfile location
-.NOTES
-  Version:        1.0
+Output file stored in $outputfile location .NOTES
+  Version:        1.1
   Author:         SBarker
   Creation Date:  25-10-2020
-  Purpose/Change: Initial script  
+  Purpose/Change: Initial script
 Version 1.0
-Purpose/Change: Initial script  
+Purpose/Change: Initial script
+Version 1.1
+Updated to email and / or copy to UNC path
 #>
 Function createdirectory {
     param ($folderpath,
@@ -54,14 +53,16 @@ $sdmdev = "server1"
 $sdmprod = "server2"
 $XlsxDir1 = "D:\RVTools\" #add servername as folder $Output = $XlsxDir1+"RvToolsLog.csv"
 $ServerlistErrorLog = "D:\RVTools\" + $strDate + "_Error.log"
-
+#Do you want to email a RVTools extract, enter yes and fill out the $emailhash details
+$emailreport = "Yes"
+#Do you want to copy the RVTools extract, then select yes to the $copyreport details and fill in the $sdmdev details
+$copyreport = "No"
+$site = "RVTools_Name_"
+$Output = "D:\RVTools\ExportLog.csv"
 $emailhash = @{
-    from       = "server1@somedomain.local"
-    to         = "admin@somedomain.com"
-    body       = "Test body"
-    subject    = "Test subject"
-    smtpserver = "server1"
-    attachment = "$XlsxDir1$VCServer\$XlsxFile1"
+    from       = ""
+    to         = ""
+    smtpserver = ""
 }
 
 $rvtoolslog = @()
@@ -69,14 +70,19 @@ $rvtoolslog = @()
 #Get Server list
 try {
     $Servers = Get-Content -Path "D:\RVTools\Serverlist.txt" -ErrorAction stop 
+} 
+catch {
+    New-Item -Path $ServerlistErrorLog -ItemType File -Force | Out-Null
+    $_.exception.message | Out-File -FilePath $ServerlistErrorLog 
+    write-host $_.exception.message 
+    return
 }
-catch { New-Item -Path $ServerlistErrorLog -ItemType File -Force $_.exception.message | Out-File -FilePath $ServerlistErrorLog write-host $_.exception.message EXIT }
-
 
 Foreach ($VCServer in $Servers) {
 
-    $rvtoolsdata = New-Object psobject -Property @{ 
-        Date       = Get-date -f dd-MM-yyyy_HH:mm Server=""
+    $rvtoolsdata = New-Object psobject -Property @{
+        Date       = Get-date -f dd-MM-yyyy_HH:mm
+        Server     = ""
         ServerList = ""
         Export     = ""
         CopytoDev  = ""
@@ -113,14 +119,18 @@ Foreach ($VCServer in $Servers) {
     }
     ELSE {
         $rvtoolsdata.Export = "OK"
-        #Used to copy to SDM Servers
-        #Copying to dev
-        copyfiles -serverpath $sdmdev
-        #Copying to Prod
-        copyfiles -serverpath $sdmdev
+        if ($copyreport -eq "Yes") {
+            #Used to copy to SDM Servers
+            #Copying to dev
+            copyfiles -serverpath $sdmdev
+            #Copying to Prod
+            copyfiles -serverpath $sdmdev
+        }
+    }
+    if ($emailreport -eq "Yes") {
+        Send-MailMessage @emailhash -Subject "$site$VCServer" -Attachments "$XlsxDir1$VCServer\$XlsxFile1"
     }
     $rvtoolslog += $rvtoolsdata
-    Send-MailMessage @emailhash
 }
 
-return $rvtoolslog | Select Server, ServerList, Date, Export, CopytoDev, CopytoProd | Export-Csv -Path $Output -NoTypeInformation
+$rvtoolslog | Select Server, ServerList, Date, Export, CopytoDev, CopytoProd | Export-Csv -Path $Output -Append -NoTypeInformation
