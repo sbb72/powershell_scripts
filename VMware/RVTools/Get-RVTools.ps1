@@ -124,7 +124,7 @@ Foreach ($VCServer in $Servers) {
             #Copying to dev
             copyfiles -serverpath $sdmdev
             #Copying to Prod
-            copyfiles -serverpath $sdmdev
+            copyfiles -serverpath $sdmprod
         }
     }
     if ($emailreport -eq "Yes") {
