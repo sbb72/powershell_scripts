@@ -2,7 +2,7 @@
 $strTime = Get-date -f "HH:mm"
 $Datastore = "dsName"
 
-$outputfile = "D:\3622v\Datastore04.csv"
+$outputfile = "D:\path\Datastore04.csv"
 
 $vCenterServer = "vcname"
 
