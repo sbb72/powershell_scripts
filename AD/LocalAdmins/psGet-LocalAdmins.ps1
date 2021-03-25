@@ -11,11 +11,14 @@ This script has been created to check what is in the local Administrators group 
   Creation Date:  05-06-2019
   Purpose/Change: Initial script  
 #>
-$servers = Get-Content ".\PCList.txt"
+#Choose the input data below
+#$servers = Get-Content ".\PCList.txt"
+#$Servers = Get-adcomputer -filter {OperatingSystem -like "*server*"} | Select Name
 $output = '.\LA_Weds_PCs.csv' 
 $results = @()
 
 foreach ($server in $servers) {
+$server = $Server.name
   $admins = @()
   $group = [ADSI]"WinNT://$server/Administrators" 
   $members = @($group.psbase.Invoke("Members"))
