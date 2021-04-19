@@ -2,11 +2,12 @@
     [cmdletbinding()]
     Param (
         [Parameter(Mandatory = $False, Position = 0)]
-        [String]$Address = "email",
+        [String]$Address = "",
         [Parameter(Mandatory = $False, Position = 1)]
         [String]$Subject = "xHF",
         [Parameter(Mandatory = $False, Position = 2)]
         [String]$Body = "Pontypool"
+        
     )
     Begin {
         Clear-Host
@@ -19,6 +20,7 @@
         $Mail.To = "$Address"
         $Mail.Subject = $Subject
         $Mail.Body = $Body
+        $Mail.Attachments.Add("D:\Data\temp\DXC_Page3.jpg")
         # $Mail.HTMLBody = "When is swimming?"
         # $File = "D:\CP\timetable.pdf"
         # $Mail.Attachments.Add($File)
