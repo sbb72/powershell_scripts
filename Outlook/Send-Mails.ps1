@@ -36,3 +36,6 @@
 
 # Example of using this function
 Send-Email #-Address deck@swimmingpool.com
+
+
+$testDate = (Get-date).AddDays(-1).ToString("dd-MM-yyyy")
