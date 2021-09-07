@@ -1,0 +1,2 @@
+#Get users groups
+Get-ADPrincipalGroupMembership username | select name 
