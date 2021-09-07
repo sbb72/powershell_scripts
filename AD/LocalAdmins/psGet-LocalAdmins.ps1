@@ -11,10 +11,15 @@ This script has been created to check what is in the local Administrators group 
   Creation Date:  05-06-2019
   Purpose/Change: Initial script  
 #>
+
+Import-Module ActiveDirectory
 #Choose the input data below
 #$servers = Get-Content ".\PCList.txt"
-#$Servers = Get-adcomputer -filter {OperatingSystem -like "*server*"} | Select Name
-$output = '.\LA_Weds_PCs.csv' 
+$Servers = Get-adcomputer -filter {OperatingSystem -like "*server*"} | Select Name
+
+$reportdate = Get-Date -Format dd-MM-yyyy
+$output = ".\"+$ReportDate+"_LocalAdmins.csv"
+
 $results = @()
 
 foreach ($server in $servers) {
@@ -28,7 +33,7 @@ $server = $Server.name
       $obj = new-object psobject -Property @{
         Server = $Server
         Admin  = $_.GetType().InvokeMember("Name", 'GetProperty', $null, $_, $null)
-        Ping   = ""
+        Ping   = "Ping OK"
       }
       $admins += $obj
     }
