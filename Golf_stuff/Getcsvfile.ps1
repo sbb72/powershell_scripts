@@ -2,13 +2,6 @@ $foldername = "C:\Users\Scott\Downloads\Wood_Bowl_(Major)_NettScoreSheet_15_03_2
 
 $csvdata = Import-csv -Path $foldername 
 
-#$csvTeeBox | Select-Object Filename
-
-#$csvdata | Where-Object {$_.'Date:' -match $searchTerm -or $_.system -match $searchTerm} |Select-Object -Expand Name
-
-
-#$Test = $csvDate.ToString().Split(';') | Select-String Name
-
 $CompDataResponse  = New-Object System.Collections.ArrayList
 $Response  = New-Object System.Collections.ArrayList
 Foreach ($csvline in $csvdata) 
@@ -54,4 +47,4 @@ Foreach ($csvline in $csvdata)
 
     $Response.Add($CompDataResponse)
 }
-Return $Response
+Return $Response | FT
