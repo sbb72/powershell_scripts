@@ -1,4 +1,4 @@
-$foldername = "C:\Users\Scott\Downloads\Wood_Bowl_(Major)_NettScoreSheet_15_03_2024.csv"
+$foldername = "C:\Users\Scott\Downloads\golfcsv\Wood_Bowl_(Major)_NettScoreSheet_15_03_2024.csv"
 
 $csvdata = Import-csv -Path $foldername 
 
