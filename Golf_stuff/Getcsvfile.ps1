@@ -4,9 +4,8 @@ $csvdata = Import-csv -Path $foldername
 
 
 
-$csvGameType = $csvdata | select-string 'Score Type:'
 
-$csvTeeBox = $csvdata | select-string 'Course/Tee:'
+
 
 $csvTeeBox | Select-Object Filename
 
@@ -17,10 +16,16 @@ $Test = $csvDate.ToString().Split(';') | Select-String Name
 
 #Get date of comp from csv file
 $csvDate = $csvdata | select-string "Date:" 
-#$date1 = $Test.ToString("dd-MM-yyyy").Split('=')[1]
-
+$Test = $csvDate.ToString().Split(';') | Select-String Name
+$Test.ToString("dd-MM-yyyy").Split('=')[1]
 Get-Date $Test.ToString("dd-MM-yyyy").Split('=')[1] -Format 'dd-MM-yyyy'
 
-PS> $date = '24 June 2012 00:00:00'
-PS> Get-Date $date -Format 'dd/MM/yyyy'
-24/06/2012
+#Format of play
+$csvGameFormat = $csvdata | select-string 'Score Type:'
+$csvGameFormat  = $csvGameType.ToString().Split(';') | Select-String Name
+$csvGameFormat = $csvGameFormat.ToString().Split('=')[1]
+
+#Tee
+$csvTeeBox = $csvdata | select-string 'Course/Tee:'
+$csvTeeBox  = $csvTeeBox.ToString().Split(';') | Select-String Name
+$csvTeeBox = $csvTeeBox.ToString().Split('=')[1]
