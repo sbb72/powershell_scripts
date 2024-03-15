@@ -1,8 +1,8 @@
-$foldername = "C:\Temp\Wood_Bowl_(Major)_NettScoreSheet_15_03_2024 (2).csv"
+$foldername = "C:\Users\Scott\Downloads\Wood_Bowl_(Major)_NettScoreSheet_15_03_2024.csv"
 
 $csvdata = Import-csv -Path $foldername 
 
-$csvDate = $csvdata | select-string "Date:" 
+
 
 $csvGameType = $csvdata | select-string 'Score Type:'
 
@@ -15,4 +15,12 @@ $csvdata | Where-Object {$_.'Date:' -match $searchTerm -or $_.system -match $sea
 
 $Test = $csvDate.ToString().Split(';') | Select-String Name
 
-$Test
+#Get date of comp from csv file
+$csvDate = $csvdata | select-string "Date:" 
+#$date1 = $Test.ToString("dd-MM-yyyy").Split('=')[1]
+
+Get-Date $Test.ToString("dd-MM-yyyy").Split('=')[1] -Format 'dd-MM-yyyy'
+
+PS> $date = '24 June 2012 00:00:00'
+PS> Get-Date $date -Format 'dd/MM/yyyy'
+24/06/2012
