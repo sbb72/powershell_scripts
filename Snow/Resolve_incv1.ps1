@@ -9,7 +9,7 @@
 # Define variables
 $SnowUrl = "csc.service-now.com"
 $ClosureCode = "Solved (Permanently)"
-$ClosureNotesMsg = "Duplicate Ticket"
+$ClosureNotesMsg = "Rasied Incorrectly"
 
 Import-Module C:\Data\git-repo_work\iSolve-Powershell-Module\DXC-iSolve -Force
 
