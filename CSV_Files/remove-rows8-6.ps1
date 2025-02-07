@@ -3,12 +3,10 @@ Write-Host "Script started at '$StartScript'"
 
 
 # Path to the input CSV file
-$inputCsvPath = 'C:\Temp\vrops\2-6-25 DXC  Rightsizing  VM Capacity  MDS  WLK  8-6_Mon-Fri Automation_Maidstone.csv'
+$inputCsvPath = 'C:\Temp\.csv'
 
 # Path to save the output CSV file
-$outputCsvPath = "C:\Temp\vrops\MDSWLK_8-6.csv"
-
-#$servers = Get-Content -Path 'C:\Temp\script-test\ServerList.txt'
+$outputCsvPath = "C:\Temp\output.csv"
 
 # Read the CSV file
 Write-Host "Importing '$inputCsvPath '"

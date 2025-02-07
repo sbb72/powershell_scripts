@@ -1,12 +1,11 @@
 ﻿$StartScript = (Get-Date)
 Write-Host "Script started at '$StartScript'" 
 
-
 # Path to the input CSV file
-$inputCsvPath = 'C:\Temp\script-test\1-26-25 DXC  Rightsizing   Undersized  MDS  GLK Automation_Maidstone.csv'
+$inputCsvPath = 'C:\Temp\.csv'
 
 # Path to save the output CSV file
-$outputCsvPath = "C:\Temp\script-test\outputv_servers_Undersized.csv"
+$outputCsvPath = "C:\Temp\output.csv"
 
 $servers = Get-Content -Path 'C:\Temp\script-test\ServerList.txt'
 
