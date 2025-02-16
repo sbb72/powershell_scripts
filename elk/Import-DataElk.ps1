@@ -1,7 +1,7 @@
-﻿# PowerShell Script to Import CSV into Elasticsearch
+﻿# PowerShell Script to Import CSV into Elasticsearch (Handles "NR", Adds Timestamp, Avoids Index Creation Error)
 
 # Variables
-$CsvPath = "D:\Temp\Regional_Steels_August_Monthly_Medal__NettScoreSheet_11_02_2025.csv"
+$CsvPath = "D:\Temp\Regional_Steels_August_Monthly_Medal__NettScoreSheet_12_02_2025.csv"
 $ElasticsearchURL = "https://192.168.0.110:9200"
 $IndexName = "competition_results"
 $ApiKey = "bWVkVi01UUJCcVZ0bHlaSS1tN2o6M1B6a19OVUlRNHlrak0xdXBpcDdlUQ=="
@@ -15,29 +15,37 @@ $Headers = @{
     "Content-Type"  = "application/json"
 }
 
-# Create Index with Mapping
-$Mapping = @{
-    settings = @{
-        number_of_shards   = 1
-        number_of_replicas = 0
-    }
-    mappings = @{
-        properties = @{
-            "@timestamp" = [DateTime]::UtcNow
-            Pos       = @{ type = "keyword" }
-            Name      = @{ type = "text" }
-            Gross     = @{ type = "integer" }
-            Hcp       = @{ type = "float" }
-            Nett      = @{ type = "integer" }
-            NewExact  = @{ type = "float" }
+# Check if Index Already Exists
+try {
+    $IndexCheck = Invoke-RestMethod -Uri "$ElasticsearchURL/$IndexName" -Method Get -Headers $Headers -ErrorAction Stop
+    Write-Host "Index '$IndexName' already exists. Proceeding with data import..."
+} catch {
+    Write-Host "Index '$IndexName' does not exist. Creating..."
+    
+    # Create Index with Mapping
+    $Mapping = @{
+        settings = @{
+            number_of_shards   = 1
+            number_of_replicas = 1
         }
-    }
-} | ConvertTo-Json -Depth 10
+        mappings = @{
+            properties = @{
+                Pos         = @{ type = "keyword" }
+                Name        = @{ type = "text" }
+                Gross       = @{ type = "integer" }
+                Hcp         = @{ type = "float" }
+                Nett        = @{ type = "integer" }
+                NewExact    = @{ type = "float" }
+                imported_at = @{ type = "date" }
+            }
+        }
+    } | ConvertTo-Json -Depth 10
 
-# Create Index (Ignore if already exists)
-Invoke-RestMethod -Uri "$ElasticsearchURL/$IndexName" -Method Put -Headers $Headers -Body $Mapping -ErrorAction SilentlyContinue
+    Invoke-RestMethod -Uri "$ElasticsearchURL/$IndexName" -Method Put -Headers $Headers -Body $Mapping
+    Write-Host "Index '$IndexName' created successfully."
+}
 
-# Read CSV and Convert Data
+# Read CSV and Filter Data
 $CsvData = Import-Csv -Path $CsvPath | Where-Object { $_.Pos -match "^\d+$" }  # Exclude division headers
 
 # Function to Convert Values Safely
@@ -50,18 +58,21 @@ function Convert-ToNumber {
     return $null  # Return null for invalid numbers (e.g., "NR")
 }
 
+# Get Current UTC Time in ISO 8601 Format
+$Timestamp = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+
 # Build Bulk JSON Payload (Ensure newline at the end)
 $BulkData = ""
 foreach ($row in $CsvData) {
     $IndexAction = @{ index = @{ _index = $IndexName } } | ConvertTo-Json -Compress
     $Document = @{
-        imported_at = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
-        Pos      = Convert-ToNumber -Value $row.Pos -Type "int"
-        Name     = $row.Name
-        Gross    = Convert-ToNumber -Value $row.Gross -Type "int"
-        Hcp      = Convert-ToNumber -Value $row.Hcp -Type "float"
-        Nett     = Convert-ToNumber -Value $row.Nett -Type "int"
-        NewExact = Convert-ToNumber -Value $row.NewExact -Type "float"
+        Pos         = Convert-ToNumber -Value $row.Pos -Type "int"
+        Name        = $row.Name
+        Gross       = Convert-ToNumber -Value $row.Gross -Type "int"
+        Hcp         = Convert-ToNumber -Value $row.Hcp -Type "float"
+        Nett        = Convert-ToNumber -Value $row.Nett -Type "int"
+        NewExact    = Convert-ToNumber -Value $row.NewExact -Type "float"
+        imported_at = $Timestamp  # Add import timestamp
     } | ConvertTo-Json -Compress
     $BulkData += "$IndexAction`n$Document`n"  # Append newline after each document
 }
