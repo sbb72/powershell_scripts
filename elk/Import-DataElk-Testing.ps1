@@ -40,7 +40,7 @@ $input_files | ForEach-Object {
                 # Convert to UTC **without shifting the day**
                 $CompetitionDate = [DateTime]::SpecifyKind($DateTime, [System.DateTimeKind]::Utc).ToString("yyyy-MM-ddTHH:mm:ssZ")
 
-                Write-Host "✅ Original: $DateString → UTC: $UtcDate"
+                #Write-Host "✅ Original: $DateString → UTC: $UtcDate"
                 break
             } catch {
                 continue
@@ -51,7 +51,7 @@ $input_files | ForEach-Object {
     ElseIf ($_.Name -match 'Major') {
         
         $CompetitionName = $_.Name.Split("_")[0]
-        $Year = ((($Majors.Split("_")[2]).Split(".")[0]).Split("-"))[2]
+        $Year = ((($_.Name.Split("_")[2]).Split(".")[0]).Split("-"))[2]
         $IndexName = "majors_$Year"
         Write-Host "File name $($_.Name), Index name '$IndexName', Competition Name '$CompetitionName'"
 
@@ -69,7 +69,7 @@ $input_files | ForEach-Object {
                 # Convert to UTC **without shifting the day**
                 $CompetitionDate = [DateTime]::SpecifyKind($DateTime, [System.DateTimeKind]::Utc).ToString("yyyy-MM-ddTHH:mm:ssZ")
 
-                Write-Host "✅ Original: $DateString → UTC: $UtcDate"
+                #Write-Host "✅ Original: $DateString → UTC: $UtcDate"
                 break
             } catch {
                 continue
@@ -96,12 +96,13 @@ $input_files | ForEach-Object {
                 properties = @{
                     CompetitionName = @{ type = "text" }
                     CompetitionDate = @{ type = "date" }
+                    Division       = @{ type = "integer" }
                     Pos         = @{ type = "keyword" }
                     Name        = @{ type = "text" }
                     Gross       = @{ type = "integer" }
                     Hcp         = @{ type = "float" }
                     Nett        = @{ type = "integer" }
-                    NewExact    = @{ type = "float" }
+                    #NewExact    = @{ type = "float" }
                     imported_at = @{ type = "date" }
                 }
             }
@@ -114,14 +115,14 @@ $input_files | ForEach-Object {
     # Read CSV and Filter Data
     $CsvData = Import-Csv -Path $_.Fullname | Where-Object { $_.Pos -match "^\d+$" }  # Exclude division headers
 
-    # Function to Convert Values Safely
+    # Function to Convert "NR" or non-numeric values to 0
     function Convert-ToNumber {
         param ($Value, $Type = "int")
         if ($Value -match "^\d+(\.\d+)?$") {
             if ($Type -eq "int") { return [int]$Value }
             if ($Type -eq "float") { return [float]$Value }
         }
-        return $null  # Return null for invalid numbers (e.g., "NR")
+        return 0  # Return 0 for "NR" or any non-numeric value
     }
 
     # Get Current UTC Time in ISO 8601 Format
@@ -134,12 +135,13 @@ $input_files | ForEach-Object {
         $Document = @{
             CompetitionName = $CompetitionName
             CompetitionDate = $CompetitionDate
+            Division    = $row.Division
             Pos         = Convert-ToNumber -Value $row.Pos -Type "int"
             Name        = $row.Name
             Gross       = Convert-ToNumber -Value $row.Gross -Type "int"
             Hcp         = Convert-ToNumber -Value $row.Hcp -Type "float"
             Nett        = Convert-ToNumber -Value $row.Nett -Type "int"
-            NewExact    = Convert-ToNumber -Value $row.NewExact -Type "float"
+            #NewExact    = Convert-ToNumber -Value $row.NewExact -Type "float"
             imported_at = $Timestamp  # Add import timestamp
         } | ConvertTo-Json -Compress
         $BulkData += "$IndexAction`n$Document`n"  # Append newline after each document
