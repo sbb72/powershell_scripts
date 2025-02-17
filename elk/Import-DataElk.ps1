@@ -76,6 +76,34 @@ $input_files | ForEach-Object {
             }
         }
     }
+    ElseIf ($_.Name -match 'Winter') {
+        
+        $CompetitionName = $_.Name.Split("_")[0]
+        $Year = ((($_.Name.Split("_")[2]).Split(".")[0]).Split("-"))[2]
+        $IndexName = "winter_league_$Year"
+        Write-Host "File name $($_.Name), Index name '$IndexName', Competition Name '$CompetitionName'"
+
+        $DateString = (($_.Name.Split("_")[1]).Split(".")[0])
+
+        # Define possible formats
+        $DateFormats = @("dd/MM/yyyy", "MM/dd/yyyy", "dd-MM-yyyy", "MM-dd-yyyy", "dd.MM.yyyy", "MM.dd.yyyy")
+
+        # Try parsing using multiple formats
+        foreach ($Format in $DateFormats) {
+            try {
+                # Parse date as LOCAL
+                $DateTime = [DateTime]::ParseExact($DateString, $Format, $null, [System.Globalization.DateTimeStyles]::None)
+
+                # Convert to UTC **without shifting the day**
+                $CompetitionDate = [DateTime]::SpecifyKind($DateTime, [System.DateTimeKind]::Utc).ToString("yyyy-MM-ddTHH:mm:ssZ")
+
+                #Write-Host "✅ Original: $DateString → UTC: $UtcDate"
+                break
+            } catch {
+                continue
+            }
+        }
+    }
 
     # Check if Index Already Exists
     try {
