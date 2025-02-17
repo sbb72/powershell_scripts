@@ -1,12 +1,12 @@
 # PowerShell Script to Import CSV into Elasticsearch (Handles "NR", Adds Timestamp, Avoids Index Creation Error)
 
 # Variables
-$CsvPath = "D:\Temp\Regional_Steels_August_Monthly_Medal__NettScoreSheet_12_02_2025.csv"
+#$CsvPath = "D:\Temp\Regional_Steels_August_Monthly_Medal__NettScoreSheet_12_02_2025.csv"
 $ElasticsearchURL = "https://192.168.0.110:9200"
 #$IndexName = "competition_results"
 $ApiKey = "bWVkVi01UUJCcVZ0bHlaSS1tN2o6M1B6a19OVUlRNHlrak0xdXBpcDdlUQ=="
 $directory_input_files = "D:\Temp"
-$input_files = Get-ChildItem -Path $directory_input_files -Filter *csv
+$input_files = Get-ChildItem -Path $directory_input_files -Filter *.csv 
 
 # Ignore SSL Certificate Validation
 [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
@@ -76,8 +76,6 @@ $input_files | ForEach-Object {
             }
         }
     }
-
-
 
     # Check if Index Already Exists
     try {
