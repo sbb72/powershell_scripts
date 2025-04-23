@@ -5,7 +5,7 @@
 $ElasticsearchURL = "https://192.168.0.110:9200"
 #$IndexName = "competition_results"
 $ApiKey = "bWVkVi01UUJCcVZ0bHlaSS1tN2o6M1B6a19OVUlRNHlrak0xdXBpcDdlUQ=="
-$directory_input_files = "D:\Temp"
+$directory_input_files = "D:\Temp\MM_2024"
 $input_files = Get-ChildItem -Path $directory_input_files -Filter *.csv 
 
 # Ignore SSL Certificate Validation
@@ -124,7 +124,8 @@ $input_files | ForEach-Object {
                     CompetitionDate = @{ type = "date" }
                     Division       = @{ type = "integer" }
                     Pos         = @{ type = "keyword" }
-                    Name        = @{ type = "text" }
+                    #Name        = @{ type = "text" }
+                    Name        = @{ type = "keyword" }
                     Gross       = @{ type = "integer" }
                     Hcp         = @{ type = "float" }
                     Nett        = @{ type = "integer" }
